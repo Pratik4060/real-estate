@@ -1,0 +1,420 @@
+.agent-dashboard-container {
+  width: 100%;
+  background: #eff6ff;
+  font-family: "Poppins", sans-serif;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.agent-dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.agent-dashboard-title-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.agent-visit-card {
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.agent-visit-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.agent-visit-name {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.agent-visit-property {
+  color: #777;
+  font-size: 14px;
+}
+
+.agent-visit-date,
+.agent-visit-time {
+  font-size: 14px;
+  color: #555;
+}
+
+.agent-dashboard-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #000000;
+  margin: 0 0 4px 0;
+}
+
+.agent-dashboard-subtitle {
+  font-size: 14px;
+  color: #667085;
+  margin: 0;
+}
+
+.agent-dashboard-controls {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.agent-date-picker-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.agent-calendar-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.agent-date-dropdown-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: #ffffff;
+  border: 1px solid #eaecf0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #000000;
+  transition: all 0.2s ease;
+}
+
+.agent-date-dropdown-btn:hover {
+  border-color: #155dfc;
+}
+
+.agent-dropdown-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.agent-date-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  border: 1px solid #eaecf0;
+  border-radius: 8px;
+  min-width: 150px;
+  z-index: 100;
+  margin-top: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.agent-date-option {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #000000;
+  transition: background 0.2s ease;
+}
+
+.agent-date-option:hover {
+  background: #f9fafb;
+}
+
+.agent-date-option.active {
+  background: #eff6ff;
+  color: #155dfc;
+  font-weight: 600;
+}
+
+.agent-download-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: #155dfc;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.agent-download-btn:hover {
+  background: #0d46ba;
+}
+
+.agent-download-btn img {
+  width: 16px;
+  height: 16px;
+}
+
+.agent-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.agent-stat-card {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #d7d7d7;
+  padding: 24px;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.agent-stat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.agent-stat-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: #374151;
+}
+
+.agent-stat-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.agent-stat-icon-wrapper.blue {
+  background: #d0e4ff;
+}
+
+.agent-stat-icon-wrapper.green {
+  background: #d1fadf;
+}
+
+.agent-stat-icon-wrapper.purple {
+  background: #f3e8ff;
+}
+
+.agent-stat-icon-wrapper.red {
+  background: #fee4e2;
+}
+
+.agent-stat-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.agent-stat-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.agent-stat-value {
+  font-size: 32px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.agent-stat-trend {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.agent-stat-trend.positive {
+  color: #12b981;
+}
+
+.agent-stat-trend.negative {
+  color: #ef4444;
+}
+
+.agent-dashboard-split-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.agent-recent-leads,
+.agent-upcoming-visits {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid #d7d7d7;
+}
+
+.agent-section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 20px 0;
+}
+
+.agent-leads-list,
+.agent-visits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Recent Leads Card Styling */
+.agent-lead-card {
+  border: 1px solid #eaecf0;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #fcfbfb;
+}
+
+.agent-lead-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.agent-lead-name {
+  margin: 0 0 4px 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #111827;
+}
+
+.agent-lead-location {
+  margin: 0;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.agent-lead-price {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.agent-lead-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.agent-lead-tags {
+  display: flex;
+  gap: 8px;
+}
+
+.agent-lead-tag {
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.agent-lead-tag.buy {
+  background: #dbeafe;
+  color: #1e40af;
+}
+.agent-lead-tag.rent {
+  background: #dbeafe;
+  color: #1e40af;
+}
+.agent-lead-tag.verified {
+  background: #dcfce7;
+  color: #166534;
+}
+.agent-lead-tag.contacted {
+  background: #dcfce7;
+  color: #166534;
+}
+.agent-lead-tag.new {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.agent-lead-tag.buy { background: #C0F2FF; color: #171616; }
+.agent-lead-tag.rent { background: #C0F2FF; color: #171616;; }
+.agent-lead-tag.verified { background:#B9FFB9; color: #1A1616; }
+.agent-lead-tag.contacted { background:#B9FFB9; color: #1A1616; }
+.agent-lead-tag.new { background:#B9FFB9; color: #1A1616; }
+
+
+.agent-lead-phone {
+  font-size: 14px;
+  color: #374151;
+}
+
+.agent-visit-card {
+  height: 100px;
+  background-color: #fcfbfb;
+  border: 1px solid #eaecf0;
+  border-radius: 8px;
+  padding: 26px;
+  background-color: #FCFBFB;
+  gap: 27px;
+}
+
+.agent-visit-card-left{
+  gap: 35px;
+}
+
+.agent-visit-name {
+  margin: 0 0 4px 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #111827;
+}
+
+.agent-visit-property {
+  margin: 0;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.agent-visit-card-right {
+  text-align: right;
+}
+
+.agent-visit-date {
+  font-size: 14px;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.agent-visit-time {
+  font-size: 14px;
+  color: #374151;
+}
+
+@media (max-width: 992px) {
+  .agent-dashboard-split-content {
+    grid-template-columns: 1fr;
+  }
+}

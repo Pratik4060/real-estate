@@ -1,0 +1,191 @@
+/* AgentSidebar.css - Same as Admin Sidebar */
+.agent-sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 271px;
+  height: 100vh;
+  background: #ffffff;
+  border-right: 0px solid #eaecf0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Desktop: Sidebar always visible */
+@media (min-width: 1025px) {
+  .agent-sidebar {
+    transform: translateX(0);
+    position: fixed;
+  }
+}
+
+/* Outer Layout Container */
+.agent-sidebar-outer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.agent-logo-section {
+  position: absolute;
+  top: 18px;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
+}
+
+.agent-logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  flex-shrink: 0;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.agent-logo-container:hover {
+  opacity: 0.8;
+}
+
+.agent-sidebar-logo {
+  width: 140px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.agent-logo-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: #0057b7;
+  font-size: 15px;
+  margin-top: 2px;
+  text-align: center;
+}
+
+/* Inner Box Layout */
+.agent-sidebar-inner {
+  position: absolute;
+  width: 207px;
+  height: calc(100vh - 200px);
+  top: 93px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  gap: 25px;
+  overflow-y: auto;
+}
+
+/* Navigation Menu */
+.agent-nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 10px;
+  flex: 1;
+}
+
+.agent-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 11px;
+  text-decoration: none;
+  border-radius: 8px;
+  color: #475367;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  background: transparent;
+}
+
+.agent-nav-item:hover {
+  background-color: #f2f4f7;
+  color: #155dfc;
+}
+
+.agent-nav-item.active {
+  color: #155dfc;
+  background-color: #eff6ff;
+  padding-left: 20px;
+}
+
+/* Nav Icon */
+.agent-nav-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.agent-nav-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  display: block;
+}
+
+.agent-nav-icon-fallback {
+  width: 24px;
+  height: 24px;
+  background: #155dfc;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.agent-nav-label {
+  white-space: nowrap;
+  display: inline;
+  color: inherit;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .agent-sidebar {
+    transform: translateX(-100%);
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .agent-sidebar.open {
+    transform: translateX(0);
+  }
+}
+
+/* Custom scrollbar for sidebar */
+.agent-sidebar-inner::-webkit-scrollbar {
+  width: 6px;
+}
+
+.agent-sidebar-inner::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.agent-sidebar-inner::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 3px;
+}
+
+.agent-sidebar-inner::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}

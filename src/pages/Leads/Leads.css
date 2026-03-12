@@ -1,0 +1,1054 @@
+/* src/pages/Leads/Leads.css */
+
+.admin-leads-page.leads-container{
+  width: 100%;
+  min-height: 100vh;
+  background: #EFF6FF;
+  font-family: "Poppins", sans-serif;
+}
+
+.admin-leads-page .leads-content{
+  padding: 24px;
+}
+
+/* Header Section */
+.admin-leads-page .leads-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.admin-leads-page .leads-header-left h1{
+  font-size: 28px;
+  font-weight: 600;
+  color: #000000;
+  margin: 0 0 4px 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.admin-leads-page .leads-header-left p{
+  font-size: 16px;
+  color: #000000;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.admin-leads-page .add-leads-btn{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: #155dfc;
+  border: 1px solid #155dfc;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  height: 40px;
+}
+
+.admin-leads-page .add-leads-btn:hover{
+  background: #0e4ad6;
+  border-color: #0e4ad6;
+}
+
+.admin-leads-page .plus-icon{
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* White Card */
+.admin-leads-page .leads-card{
+  background: #ffffff;
+  border: 1px solid #eaecf0;
+  border-radius: 11px;
+  padding: 24px;
+  margin-top: 60px;
+}
+
+/* Search and Filters */
+.admin-leads-page .leads-filters{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.admin-leads-page .search-container{
+  position: relative;
+  width: 324px;
+  height: 40px;
+}
+
+.admin-leads-page .search-container .search-icon{
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+}
+
+.admin-leads-page .search-container input{
+  width: 100%;
+  height: 100%;
+  padding: 0 12px 0 40px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.admin-leads-page .search-container input:focus{
+  border-color: #155dfc;
+  box-shadow: 0 0 0 3px rgba(21, 93, 252, 0.1);
+}
+
+.admin-leads-page .search-container input::placeholder{
+  color: #667085;
+}
+
+.admin-leads-page .filters-group{
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Filter Dropdown */
+.admin-leads-page .filter-dropdown{
+  position: relative;
+  width: 180px;
+}
+
+.admin-leads-page .filter-btn{
+  width: 100%;
+  height: 40px;
+  background: white;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #344054;
+  transition: all 0.2s ease;
+}
+
+.admin-leads-page .filter-btn:hover{
+  background: #f9fafb;
+  border-color: #155dfc;
+}
+
+.admin-leads-page .filter-btn-content{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.admin-leads-page .filter-icon{
+  width: 16px;
+  height: 16px;
+}
+
+.admin-leads-page .dropdown-arrow{
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.admin-leads-page .filter-dropdown-menu{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 4px;
+  background: white;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.admin-leads-page .filter-option{
+  padding: 10px 16px;
+  font-size: 14px;
+  color: #344054;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+.admin-leads-page .filter-option:hover{
+  background: #f9fafb;
+}
+
+.admin-leads-page .filter-option.active{
+  color: #155dfc;
+  font-weight: 500;
+}
+
+/* Delete Button */
+.admin-leads-page .delete-btn{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 16px;
+  height: 40px;
+  background: #dc2626;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.admin-leads-page .delete-btn:hover:not(.disabled){
+  background: #b91c1c;
+}
+
+.admin-leads-page .delete-btn.disabled{
+  background: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.admin-leads-page .delete-btn.disabled img{
+  opacity: 0.5;
+}
+
+.admin-leads-page .delete-icon{
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) invert(1);
+}
+
+.admin-leads-page .delete-btn.disabled .delete-icon{
+  filter: none;
+  opacity: 0.5;
+}
+
+/* Dropdown Overlay */
+.admin-leads-page .dropdown-overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+}
+
+/* Table Container */
+.admin-leads-page .table-container{
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 24px;
+  border: 1px solid #eaecf0;
+  border-radius: 8px;
+}
+
+/* Custom Scrollbar */
+.admin-leads-page .table-container::-webkit-scrollbar{
+  width: 8px;
+  height: 8px;
+}
+
+.admin-leads-page .table-container::-webkit-scrollbar-track{
+  background: transparent;
+  border-radius: 4px;
+}
+
+.admin-leads-page .table-container::-webkit-scrollbar-thumb{
+  background: transparent;
+  border-radius: 4px;
+}
+
+.admin-leads-page .table-container::-webkit-scrollbar-thumb:hover{
+  background: #555;
+}
+
+/* Table Styles */
+.admin-leads-page .leads-table{
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 1600px;
+  font-family: "Poppins", sans-serif;
+}
+
+.admin-leads-page .leads-table thead{
+  background: #f9fafb;
+}
+
+.admin-leads-page .leads-table th{
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  text-align: left;
+  border-right: 1px solid #eaecf0;
+  border-bottom: 1px solid #eaecf0;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  height: 62px;
+  box-sizing: border-box;
+}
+
+.admin-leads-page .leads-table th:last-child{
+  border-right: none;
+}
+
+.admin-leads-page .leads-table td{
+  font-size: 14px;
+  color: #1f2937;
+  border-right: 1px solid #eaecf0;
+  border-bottom: 1px solid #eaecf0;
+  white-space: nowrap;
+  height: 62px;
+  box-sizing: border-box;
+}
+
+.admin-leads-page .leads-table td:last-child{
+  border-right: none;
+}
+
+.admin-leads-page .leads-table tbody tr:last-child td{
+  border-bottom: none;
+}
+
+.admin-leads-page .leads-table tbody tr:hover{
+  background: #f9fafb;
+}
+
+/* Column Widths and Paddings - Exactly as per specifications */
+.admin-leads-page .leads-table th.checkbox-cell,
+.admin-leads-page .leads-table td.checkbox-cell{
+  width: 50px;
+  padding: 8px 8px 8px 11px;
+  text-align: center;
+}
+
+.admin-leads-page .leads-table th.lead-name-col,
+.admin-leads-page .leads-table td.lead-name-col{
+  width: 311px;
+  padding: 8px 8px 8px 11px;
+  gap: 8px;
+}
+
+.admin-leads-page .leads-table th.email-col,
+.admin-leads-page .leads-table td.email-col{
+  width: 240px;
+  padding: 10px 10px 10px 15px;
+  justify-content: space-between;
+}
+
+.admin-leads-page .leads-table th.phone-col,
+.admin-leads-page .leads-table td.phone-col{
+  width: 240px;
+  padding: 10px 10px 10px 15px;
+  justify-content: space-between;
+}
+
+.admin-leads-page .leads-table th.requirement-col,
+.admin-leads-page .leads-table td.requirement-col{
+  width: 299px;
+  padding: 8px 15px 8px 15px;
+  gap: 4px;
+}
+
+.admin-leads-page .leads-table th.budget-col,
+.admin-leads-page .leads-table td.budget-col{
+  width: 240px;
+  padding: 10px 10px 10px 15px;
+  justify-content: space-between;
+}
+
+.admin-leads-page .leads-table th.location-col,
+.admin-leads-page .leads-table td.location-col{
+  width: 205px;
+  padding: 8px 15px 8px 15px;
+  justify-content: space-between;
+}
+
+.admin-leads-page .leads-table th.agent-col,
+.admin-leads-page .leads-table td.agent-col{
+  width: 206px;
+  padding: 8px 15px 8px 15px;
+  justify-content: space-between;
+  border-left: 1px solid #eaecf0;
+}
+
+.admin-leads-page .leads-table th.followup-col,
+.admin-leads-page .leads-table td.followup-col{
+  width: 206px;
+  padding: 8px 15px 8px 15px;
+  justify-content: space-between;
+  border-left: 1px solid #eaecf0;
+}
+
+.admin-leads-page .leads-table th.status-col,
+.admin-leads-page .leads-table td.status-col{
+  width: 205px;
+  padding: 8px 8px 8px 15px;
+  gap: 4px;
+}
+
+.admin-leads-page .leads-table th.actions-col,
+.admin-leads-page .leads-table td.actions-col{
+  width: 193px;
+  padding: 8px;
+  border-bottom: 1px solid #eaecf0;
+}
+
+/* Table Header Content */
+.admin-leads-page .th-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.admin-leads-page .sort-icons{
+  display: flex;
+  flex-direction: column;
+  margin-left: 8px;
+}
+
+.admin-leads-page .sort-icon{
+  width: 12px;
+  height: 12px;
+  opacity: 0.3;
+  transition: opacity 0.2s ease;
+}
+
+.admin-leads-page .sort-icon.active{
+  opacity: 1;
+}
+
+/* Checkbox */
+.admin-leads-page .checkbox{
+  width: 18px;
+  height: 18px;
+  border: 2px solid #d0d5dd;
+  border-radius: 4px;
+  cursor: pointer;
+  accent-color: #155dfc;
+}
+
+/* Lead Name */
+.admin-leads-page .lead-name{
+  font-weight: 500;
+  color: #111827;
+}
+
+.admin-leads-page .lead-email{
+  color: #6b7280;
+  font-size: 13px;
+}
+
+/* Requirement Box - New styling */
+.admin-leads-page .requirement-box{
+  display: inline-block;
+  width: 155px;
+  height: 41px;
+  border: 1px solid #CDCDCD;
+  border-radius: 6px;
+  padding: 10px 21px;
+  gap: 2px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  text-align: center;
+  box-sizing: border-box;
+  line-height: 20px;
+  background: white;
+}
+
+
+.admin-leads-page .budget-cell{
+  font-weight: 500;
+  color: #059669;
+}
+
+
+.admin-leads-page .status-text{
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 4px 0;
+}
+
+/* Action Buttons */
+.admin-leads-page .action-buttons{
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.admin-leads-page .action-btn{
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease;
+  padding: 0;
+}
+
+.admin-leads-page .action-btn:hover{
+  opacity: 0.7;
+}
+
+.admin-leads-page .action-btn.delete:hover{
+  opacity: 0.7;
+}
+
+.admin-leads-page .action-btn img{
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.admin-leads-page .action-btn img[src*="eye-icon"]{
+  width: 24px;
+  height: 24px;
+}
+
+.admin-leads-page .action-btn img[src*="edit"]{
+  width: 24px;
+  height: 24px;
+}
+
+.admin-leads-page .action-btn img[src*="delete"]{
+  width: 24px;
+  height: 24px;
+}
+
+/* Pagination */
+.admin-leads-page .pagination{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.admin-leads-page .pagination-info{
+  font-size: 14px;
+  color: #6b7280;
+  font-family: "Poppins", sans-serif;
+}
+
+.admin-leads-page .pagination-controls{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.admin-leads-page .pagination-nav{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  height: 36px;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.admin-leads-page .pagination-nav:hover:not(:disabled){
+  background: #f9fafb;
+  border-color: #9ca3af;
+}
+
+.admin-leads-page .pagination-nav:disabled{
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.admin-leads-page .pagination-nav img{
+  width: 16px;
+  height: 16px;
+  margin:7px
+}
+
+.admin-leads-page .pagination-number{
+  min-width: 36px;
+  height: 36px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-leads-page .pagination-number:hover{
+  background: #f9fafb;
+  border-color: #9ca3af;
+}
+
+.admin-leads-page .pagination-number.active{
+  background: #dbe7ff;
+  border-color: #dbe7ff;
+  color: #155dfc;
+  font-weight: 500;
+}
+
+.admin-leads-page .pagination-ellipsis{
+  color: #9ca3af;
+  padding: 0 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .admin-leads-page .leads-content{
+    padding: 24px 24px 24px 24px;
+  }
+
+  .admin-leads-page .search-container{
+    width: 280px;
+  }
+}
+
+@media (max-width: 992px) {
+  .admin-leads-page .leads-content{
+    padding: 24px 20px 20px 20px;
+  }
+
+  .admin-leads-page .leads-header-left h1{
+    font-size: 26px;
+  }
+
+  .admin-leads-page .leads-header-left p{
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-leads-page .leads-content{
+    padding: 16px;
+  }
+
+  .admin-leads-page .leads-header{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .admin-leads-page .add-leads-btn{
+    width: 100%;
+    justify-content: center;
+  }
+
+  .admin-leads-page .leads-filters{
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .admin-leads-page .search-container{
+    width: 100%;
+  }
+
+  .admin-leads-page .filters-group{
+    width: 100%;
+  }
+
+  .admin-leads-page .filter-dropdown{
+    flex: 1;
+    width: auto;
+  }
+
+  .admin-leads-page .delete-btn{
+    flex: 1;
+  }
+
+  .admin-leads-page .pagination{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .admin-leads-page .pagination-info{
+    text-align: center;
+  }
+
+  .admin-leads-page .pagination-controls{
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .admin-leads-page .leads-table{
+    min-width: 1400px;
+  }
+
+  .admin-leads-page .leads-table th,
+  .admin-leads-page .leads-table td{
+    font-size: 13px;
+  }
+
+  .admin-leads-page .pagination-nav span:not(.pagination-number){
+    display: none;
+  }
+
+  .admin-leads-page .pagination-nav{
+    padding: 8px;
+  }
+
+  .admin-leads-page .pagination-number{
+    min-width: 32px;
+    height: 32px;
+  }
+}
+
+/* Modal Styles */
+.admin-leads-page .modal-overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.admin-leads-page .modal-content{
+  width: 781px;
+  height: 750px;
+  background: white;
+  border-radius: 20px;
+  border-width: 1px;
+  padding: 35px 40px;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.admin-leads-page .delete-confirm-modal{
+  width: 400px;
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+}
+
+.admin-leads-page .delete-confirm-modal h3{
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.admin-leads-page .delete-confirm-modal p{
+  margin-bottom: 25px;
+  color: #666;
+}
+
+.admin-leads-page .modal-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.admin-leads-page .modal-header h2{
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.admin-leads-page .modal-close{
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #666;
+  padding: 0;
+  line-height: 1;
+}
+
+.admin-leads-page .modal-close:hover{
+  color: #333;
+}
+
+.admin-leads-page .modal-body{
+  margin-bottom: 30px;
+}
+
+.admin-leads-page .form-row{
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.admin-leads-page .form-group{
+  flex: 1;
+}
+
+.admin-leads-page .form-group label{
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #555;
+  font-size: 14px;
+}
+
+/* Leads Page Form Inputs Only */
+.admin-leads-page.leads-container .form-group input,
+.admin-leads-page.leads-container .form-group select{
+  width: 100%;
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid #d0d5dd;
+  padding: 0 14px;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  background: #f9fafb;
+  transition: all 0.2s ease;
+}
+
+.admin-leads-page.leads-container .form-group input:focus,
+.admin-leads-page.leads-container .form-group select:focus{
+  outline: none;
+  border-color: #155dfc;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(21, 93, 252, 0.1);
+}
+
+.admin-leads-page.leads-container .form-group input:disabled,
+.admin-leads-page.leads-container .form-group select:disabled{
+  background-color: #f3f4f6;
+  cursor: not-allowed;
+}
+
+.admin-leads-page .verification-checkboxes{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.admin-leads-page .verification-checkboxes label{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.admin-leads-page .verification-checkboxes input[type="checkbox"]{
+  width: auto;
+  height: auto;
+  margin: 0;
+}
+
+.admin-leads-page .budget-examples{
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  color: #666;
+  font-size: 14px;
+}
+
+.admin-leads-page .modal-footer{
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.admin-leads-page .cancel-btn{
+  padding: 10px 24px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: white;
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.admin-leads-page .cancel-btn:hover{
+  background: #f5f5f5;
+}
+
+.admin-leads-page .submit-btn{
+  padding: 10px 24px;
+  border-radius: 8px;
+  border: none;
+  background: #007bff;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.admin-leads-page .submit-btn:hover{
+  background: #0056b3;
+}
+
+.admin-leads-page .delete-confirm-btn{
+  padding: 10px 24px;
+  border-radius: 8px;
+  border: none;
+  background: #dc3545;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.admin-leads-page .delete-confirm-btn:hover{
+  background: #c82333;
+}
+
+/* Responsive styles for modal */
+@media (max-width: 900px) {
+  .admin-leads-page .modal-content{
+    width: 90%;
+    padding: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-leads-page .form-row{
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .admin-leads-page .modal-content{
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-leads-page .modal-footer{
+    flex-direction: column-reverse;
+  }
+  
+  .admin-leads-page .cancel-btn,
+  .admin-leads-page .submit-btn,
+  .admin-leads-page .delete-confirm-btn{
+    width: 100%;
+  }
+}
+
+/* Contact Verification Section */
+.admin-leads-page .verification-title{
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.admin-leads-page .verification-toggles{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.admin-leads-page .toggle-group{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+}
+
+.admin-leads-page .toggle-label{
+  font-size: 18px;
+  color: #111827;
+  font-weight: 500;
+}
+
+.admin-leads-page .toggle-switch{
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+
+.admin-leads-page .toggle-switch input{
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.admin-leads-page .toggle-slider{
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #e5e7eb;
+  border: 1px solid #d1d5db;
+  transition: .3s;
+  border-radius: 24px;
+}
+
+.admin-leads-page .toggle-slider:before{
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 2px;
+  bottom: 2px;
+  background-color: #ffffff;
+  transition: .3s;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.admin-leads-page .toggle-switch input:checked + .toggle-slider{
+  background-color: #0ACA57;
+  border-color: #0ACA57;
+}
+
+.admin-leads-page .toggle-switch input:checked + .toggle-slider:before{
+  transform: translateX(20px);
+}
+
+/* Disabled state */
+.admin-leads-page .toggle-switch input:disabled + .toggle-slider{
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+

@@ -1,0 +1,147 @@
+.confirmation-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.confirmation-modal {
+  background: #FFFFFF;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 480px;
+  animation: slideUp 0.3s ease;
+  overflow: hidden;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.confirmation-modal-header {
+  padding: 24px 24px 16px 24px;
+  border-bottom: 1px solid #EAECF0;
+}
+
+.confirmation-modal-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1B1F25;
+  margin: 0;
+}
+
+.confirmation-modal-body {
+  padding: 24px;
+}
+
+.confirmation-modal-message {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #344054;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.confirmation-modal-footer {
+  padding: 16px 24px 24px 24px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  border-top: 1px solid #EAECF0;
+}
+
+.confirmation-modal-btn {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 100px;
+}
+
+.confirmation-modal .cancel-btn {
+  background: #FFFFFF;
+  border-color: #D0D5DD;
+  color: #344054;
+}
+
+.confirmation-modal .cancel-btn:hover {
+  background: #F9FAFB;
+  border-color: #9CA3AF;
+}
+
+.confirm-btn-danger {
+  background: #DC2626;
+  border-color: #DC2626;
+  color: #FFFFFF;
+}
+
+.confirm-btn-danger:hover {
+  background: #B91C1C;
+  border-color: #B91C1C;
+}
+
+.confirm-btn-danger:active {
+  background: #991B1B;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .confirmation-modal {
+    width: 95%;
+    max-width: none;
+  }
+
+  .confirmation-modal-header,
+  .confirmation-modal-body,
+  .confirmation-modal-footer {
+    padding: 20px;
+  }
+
+  .confirmation-modal-title {
+    font-size: 18px;
+  }
+
+  .confirmation-modal-message {
+    font-size: 13px;
+  }
+
+  .confirmation-modal-footer {
+    flex-direction: column-reverse;
+  }
+
+  .confirmation-modal-btn {
+    width: 100%;
+  }
+}
+
+

@@ -1,0 +1,685 @@
+/* Reports Container */
+.reports {
+  width: 100%;
+  background: #EFF6FF;
+  font-family: "Poppins", sans-serif;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+/* Header Section */
+.reports-header {
+  margin-bottom: 24px;
+}
+
+.reports-title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #000000;
+  margin: 0 0 4px 0;
+  line-height: 1.2;
+}
+
+.reports-subtitle {
+  font-size: 16px;
+  font-weight: 300;
+  color: #000000;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Common Filter Section */
+.common-filter-section {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 24px;
+  width: 100%;
+  max-width: 1126px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Rent vs Buy Card */
+.rent-buy-card {
+  width: 100%;
+  max-width: 1126px;
+  background: #ffffff;
+  border: 1px solid #eaecf0;
+  border-radius: 14px;
+  padding: 20px 24px;
+  box-sizing: border-box;
+  margin-bottom: 24px;
+}
+
+/* Lead Conversion Card */
+.conversion-card {
+  width: 100%;
+  max-width: 1126px;
+  background: #ffffff;
+  border: 1px solid #eaecf0;
+  border-radius: 14px;
+  padding: 20px 24px;
+  box-sizing: border-box;
+}
+
+/* Card Header */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card-header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Filter Container */
+.filter-container {
+  position: relative;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.filter-btnn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: #ffffff;
+  border: 1px solid #eaecf0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  color: #344054;
+  transition: all 0.2s ease;
+  height: 36px;
+  box-sizing: border-box;
+}
+
+.filter-btnn:hover {
+  background: #f9fafb;
+  border-color: #d0d5dd;
+}
+
+.calendar-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.filter-text {
+  font-weight: 500;
+  min-width: 100px;
+  text-align: left;
+}
+
+.dropdown-arrow {
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
+}
+
+.filter-dropdown-reports {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  background: #ffffff;
+  border: 1px solid #eaecf0;
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  width: 160px;
+  z-index: 1000;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.filter-option {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #344054;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.filter-option:hover {
+  background: #f9fafb;
+}
+
+.filter-option.selected {
+  background: #f0f4ff;
+  color: #155dfc;
+  font-weight: 500;
+}
+
+/* Download Icon Button */
+.download-icon-btn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  padding: 0;
+  border-radius: 4px;
+}
+
+.download-icon-btn:hover {
+  background-color: #f9fafb;
+}
+
+.download-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* Rent vs Buy Content */
+.rent-buy-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+/* Pie Wrapper */
+.pie-wrapper {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.circle-svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Rent Label */
+.rent-label {
+  position: absolute;
+  top: 25px;
+  right: -20px;
+  background: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1BF3CC;
+  white-space: nowrap;
+}
+
+/* Buy Label */
+.buy-label {
+  position: absolute;
+  bottom: 10px;
+  left: -30px;
+  background: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #39BBEF;
+  white-space: nowrap;
+}
+
+/* Conversion Chart */
+.conversion-content {
+  display: flex;
+  gap: 16px;
+  height: 280px;
+  margin-top: 10px;
+  position: relative;
+}
+
+/* Y-Axis */
+.y-axis {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 12px;
+  border-right: 1px solid #eaecf0;
+  min-width: 40px;
+  height: calc(100% - 30px);
+  margin-bottom: 0;
+}
+
+.y-axis-label {
+  font-size: 12px;
+  color: #667085;
+  text-align: right;
+  line-height: 1;
+  transform: translateY(50%);
+  font-weight: 400;
+}
+
+/* Chart Area */
+.chart-area {
+  flex: 1;
+  position: relative;
+  height: calc(100% - 30px);
+}
+
+/* Grid Lines */
+.grid-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.grid-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+/* Major dotted lines (0, 25, 50, 75, 100) - darker and more visible */
+.major-dotted-line {
+  height: 1px;
+  background: transparent;
+  border-top: 2px dashed #9AA6B2;
+  z-index: 1;
+  opacity: 0.8;
+}
+
+/* Middle dotted lines (12.5, 37.5, 62.5, 87.5) - lighter and less visible */
+.middle-dotted-line {
+  height: 1px;
+  background: transparent;
+  border-top: 1px dashed #D0D5DD;
+  z-index: 1;
+}
+
+/* Bars Container */
+.bars-container {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  gap: 20px;
+  padding: 0 10px 0 0;
+  z-index: 2;
+}
+
+.month-bar-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: auto;
+  height: 100%;
+}
+
+.bars-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  align-items: flex-end;
+  height: 100%;
+}
+
+/* Bar styles */
+.bar {
+  width: 48px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  transition: height 0.3s ease, opacity 0.2s ease;
+  opacity: 1;
+  align-self: flex-end;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.bar:hover {
+  opacity: 0.9;
+  filter: brightness(1.05);
+}
+
+.total-leads-bar {
+  background: #0ACA57;
+}
+
+.total-leads-bar:hover {
+  background: #0ACA57;
+  box-shadow: 0 0 0 2px rgba(10, 202, 87, 0.3);
+}
+
+.converted-bar {
+  background: #0251ED;
+}
+
+.converted-bar:hover {
+  background: #0251ED;
+  box-shadow: 0 0 0 2px rgba(2, 81, 237, 0.3);
+}
+
+/* Month labels container */
+.month-labels-container {
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 10px 0 0;
+  gap: 20px;
+}
+
+.month-label {
+  font-size: 12px;
+  color: #344054;
+  text-align: center;
+  font-weight: 500;
+  width: 48px;
+}
+
+/* Legend */
+.legend {
+  display: flex;
+  gap: 24px;
+  margin-top: 40px;
+  padding-top: 16px;
+  border-top: 1px solid #eaecf0;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.total-leads-dot {
+  background: #0ACA57;
+}
+
+.converted-dot {
+  background: #0251ED;
+}
+
+.legend-text {
+  font-size: 14px;
+  color: #344054;
+  line-height: 1.4;
+}
+
+/* Tooltip Styles */
+.bar-tooltip {
+  position: absolute;
+  transform: translate(-50%, -100%);
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  z-index: 1000;
+  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: tooltipFadeIn 0.2s ease;
+}
+
+.tooltip-content {
+  text-align: center;
+}
+
+.tooltip-month {
+  font-size: 11px;
+  opacity: 0.9;
+  margin-bottom: 2px;
+}
+
+.tooltip-value {
+  font-size: 13px;
+}
+
+.tooltip-value strong {
+  font-weight: 600;
+}
+
+.tooltip-arrow {
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid;
+  border-top-color: inherit;
+}
+
+@keyframes tooltipFadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -90%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -100%);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .reports {
+    padding: 20px;
+  }
+  
+  .common-filter-section {
+    margin-bottom: 20px;
+    padding-right: 0;
+  }
+  
+  .rent-buy-content {
+    transform: scale(0.9);
+  }
+  
+  .bars-wrapper {
+    gap: 10px;
+  }
+  
+  .bar {
+    width: 40px;
+  }
+  
+  .month-label {
+    width: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .reports-title {
+    font-size: 28px;
+  }
+  
+  .reports-subtitle {
+    font-size: 14px;
+  }
+  
+  .common-filter-section {
+    margin-bottom: 18px;
+  }
+  
+  .filter-btnn {
+    font-size: 12px;
+    padding: 6px 10px;
+    height: 32px;
+  }
+  
+  .filter-text {
+    min-width: 90px;
+  }
+  
+  .bar {
+    width: 35px;
+  }
+  
+  .month-label {
+    width: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .reports {
+    padding: 16px;
+  }
+
+  .common-filter-section {
+    margin-bottom: 16px;
+    padding: 0;
+    justify-content: flex-end;
+  }
+
+  .filter-btnn {
+    font-size: 12px;
+    padding: 6px 10px;
+    height: 32px;
+    min-width: fit-content;
+  }
+
+  .filter-text {
+    min-width: 75px;
+    font-size: 12px;
+  }
+
+  .filter-dropdown-reports {
+    width: 150px;
+    left: 0;
+  }
+
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .card-header-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .filter-btn {
+    width: 100%;
+  }
+
+  .rent-buy-card,
+  .conversion-card {
+    padding: 16px;
+  }
+
+  .card-title {
+    font-size: 16px;
+  }
+
+  .rent-buy-content {
+    transform: scale(0.8);
+  }
+
+  .conversion-content {
+    height: 220px;
+  }
+
+  .bars-wrapper {
+    gap: 8px;
+  }
+
+  .bar {
+    width: 28px;
+  }
+
+  .month-label {
+    width: 28px;
+    font-size: 10px;
+  }
+
+  .legend {
+    gap: 16px;
+    margin-top: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .reports {
+    padding: 12px;
+  }
+
+  .common-filter-section {
+    margin-bottom: 14px;
+    padding: 0;
+  }
+
+  .filter-btnn {
+    font-size: 11px;
+    padding: 5px 8px;
+    height: 30px;
+    min-width: fit-content;
+  }
+
+  .filter-text {
+    min-width: 65px;
+  }
+
+  .filter-dropdown-reports {
+    width: 140px;
+    left: 0;
+  }
+
+  .rent-buy-content {
+    transform: scale(0.7);
+  }
+  
+  .bar {
+    width: 22px;
+  }
+  
+  .month-label {
+    width: 22px;
+    font-size: 8px;
+  }
+  
+  .y-axis-label {
+    font-size: 10px;
+  }
+  
+  .legend {
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 30px;
+  }
+  
+  .rent-label, .buy-label {
+    font-size: 12px;
+    padding: 3px 6px;
+  }
+}
