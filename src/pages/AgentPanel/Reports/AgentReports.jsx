@@ -2,10 +2,6 @@ import React, { useState, useEffect } from "react";
 import { getAssetPath } from "../../../utils/assetPath";
 import "./AgentReports.css";
 
-// Import SVGs from public directory
-const calendarIcon = getAssetPath("calendar.svg");
-const dropdownIcon = getAssetPath("dropdown.svg");
-const downloadIcon = getAssetPath("download.svg");
 
 const AgentReports = () => {
   // Common filter state for all cards
@@ -367,9 +363,9 @@ const AgentReports = () => {
             className="filter-btnn"
             onClick={() => setShowDateDropdown(!showDateDropdown)}
           >
-            <img src="/assets/calendar-icon.svg" alt="calendar" className="calendar-icon" />
+            <img src="/assets/calendar.svg" alt="calendar" className="calendar-icon" />
             <span className="filter-text">{selectedDate}</span>
-            <img src="/assets/dropdown-icon.svg" alt="dropdown" className="dropdown-arrow" />
+            <img src="/assets/dropdown.svg" alt="dropdown" className="dropdown-arrow" />
           </button>
 
           {showDateDropdown && (
@@ -393,7 +389,7 @@ const AgentReports = () => {
         <div className="card-header">
           <h2 className="card-title">Rent vs Buy Distribution ({selectedDate})</h2>
           <button className="download-icon-btn" onClick={() => handleDownload('Rent-vs-Buy')}>
-            <img src="/assets/download-icon.svg" alt="download" className="download-icon" />
+            <img src="/assets/download.svg" alt="download" className="download-icon" />
           </button>
         </div>
 
@@ -495,7 +491,7 @@ const AgentReports = () => {
         <div className="card-header">
           <h2 className="card-title">Lead Conversion Rate ({selectedDate})</h2>
           <button className="download-icon-btn" onClick={() => handleDownload('Conversion-Rate')}>
-            <img src="/assets/download-icon.svg" alt="download" className="download-icon" />
+            <img src="/assets/download.svg" alt="download" className="download-icon" />
           </button>
         </div>
 

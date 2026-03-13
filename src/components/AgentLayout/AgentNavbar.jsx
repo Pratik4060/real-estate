@@ -125,7 +125,7 @@ const AgentNavbar = ({ toggleSidebar, sidebarOpen }) => {
             onClick={() => setShowNotifications(!showNotifications)}
           >
             <img
-              src={"/notification.svg"}
+              src={"/assets/notification.svg"}
               alt="Notifications"
               className="bell-icon"
               onError={(e) => {

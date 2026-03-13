@@ -27,27 +27,27 @@ const AgentSidebar = ({ isOpen = false, onClose = () => {} }) => {
     {
       name: "Dashboard",
       path: "/agent/dashboard",
-      icon: getAssetPath("dashboard.svg"),
+      icon: "/assets/dashboard.svg",
     },
     {
       name: "Leads",
       path: "/agent/leads",
-      icon: getAssetPath("Leads.svg"),
+      icon: "/assets/leads.svg",
     },
     {
       name: "Reports",
       path: "/agent/reports",
-      icon: getAssetPath("Reports.svg"),
+      icon: "/assets/Reports.svg",
     },
     {
       name: "Site Visits",
       path: "/agent/site-visits",
-      icon: getAssetPath("Site Visits.svg"),
+      icon: "/assets/Site Visits.svg",
     },
     {
       name: "Log Out",
       path: "/login",
-      icon: getAssetPath("logout.svg"),
+      icon: "/assets/logout.svg",
       isLogout: true,
     },
   ];
@@ -65,7 +65,7 @@ const AgentSidebar = ({ isOpen = false, onClose = () => {} }) => {
             }}
           >
             <img
-              src={getAssetPath("Logo.svg")}
+              src="/assets/Logo.svg"
               alt="Estate Flow CRM"
               className="agent-sidebar-logo"
               onError={(e) => {
@@ -91,7 +91,7 @@ const AgentSidebar = ({ isOpen = false, onClose = () => {} }) => {
                   >
                     <div className="agent-nav-icon-wrapper">
                       <img
-                        src={item.icon}
+                        src="/assets/logout.svg"
                         alt={item.name}
                         className="agent-nav-icon"
                         onError={(e) => {
@@ -123,7 +123,7 @@ const AgentSidebar = ({ isOpen = false, onClose = () => {} }) => {
                 >
                   <div className="agent-nav-icon-wrapper">
                     <img
-                      src={item.icon}
+                      src="/assets/placeholder-icon.svg"
                       alt={item.name}
                       className="agent-nav-icon"
                       onError={(e) => {

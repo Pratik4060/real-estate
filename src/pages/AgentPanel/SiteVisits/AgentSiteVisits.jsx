@@ -302,7 +302,7 @@ const AgentSiteVisits = () => {
           {/* Search Row */}
           <div className="visits-filters">
             <div className="search-container">
-              <img src="/assets/search-icon.svg" alt="Search" className="search-icon" />
+              <img src="/assets/search.svg" alt="Search" className="search-icon" />
               <input
                 type="text"
                 placeholder="Search by client name, property, agent..."
@@ -318,7 +318,7 @@ const AgentSiteVisits = () => {
               disabled={selectedRows.length === 0}
             >
 
-              <img src="/assets/delete-icon.svg" alt="Delete" className="delete-icon" />
+              <img src="/assets/delete.svg" alt="Delete" className="delete-icon" />
               Delete ({selectedRows.length})
             </button>
           </div>
@@ -473,7 +473,7 @@ const AgentSiteVisits = () => {
                               onClick={() => handleEditClick(visit)}
                             >
 
-                              <img src="/assets/edit-icon.svg" alt="Edit" />
+                              <img src="/assets/edit.svg" alt="Edit" />
                             </button>
                             <button 
                               className="action-btn delete" 
@@ -481,7 +481,7 @@ const AgentSiteVisits = () => {
                               onClick={() => handleDeleteSingle(visit.id)}
                             >
 
-                              <img src="/assets/delete-icon.svg" alt="Delete" />
+                              <img src="/assets/delete.svg" alt="Delete" />
                             </button>
                           </div>
                         </td>
