@@ -538,15 +538,18 @@ const Agents = () => {
       <div className="agents-content">
         {/* Header Section */}
         <div className="agents-header">
-          <div className="agents-header-left">
-            <h1 className="agents-title">Agent Management</h1>
-            <p className="agents-subtitle">Manage sales agents and their access </p>
-          </div>
-          <button className="add-agent-btn" onClick={openAddModal}>
-            <span className="plus-icon">+</span>
-            Add Agent
-          </button>
-        </div>
+  <div className="agents-header-left">
+    <h1 className="agents-title">Agent Management</h1>
+    <p className="agents-subtitle">Manage sales agents and their access</p>
+  </div>
+</div>
+
+<div className="add-agent-row">
+  <button className="add-agent-btn" onClick={openAddModal}>
+    <span className="plus-icon">+</span>
+    Add Agent
+  </button>
+</div>
 
         {/* Stats Cards */}
         <div className="stats-cards">
@@ -805,14 +808,12 @@ const Agents = () => {
                         </td>
                         <td className="actions-col">
                           <div className="action-buttons">
-                            <button className="action-btn" title="View" onClick={() => openViewModal(agent)}>
-
-
-                              <img src={getAssetPath("eye-icon.svg")} alt="View" />
-                            </button>
                             <button className="action-btn" title="Edit" onClick={() => openEditModal(agent)}>
                               <img src={getAssetPath("edit.svg")} alt="Edit" />
                             </button>
+                            <button className="action-btn" title="View" onClick={() => openViewModal(agent)}>
+                              <img src={getAssetPath("eye-icon.svg")} alt="View" />
+                            </button>    
                             <button className="action-btn delete" title="Delete" onClick={() => handleDeleteClick(agent)}>
                               <img src={getAssetPath("delete.svg")} alt="Delete" />
                             </button>
