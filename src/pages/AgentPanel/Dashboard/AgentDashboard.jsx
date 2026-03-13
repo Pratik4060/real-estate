@@ -291,31 +291,6 @@ const AgentDashboard = () => {
     setShowDateDropdown(false);
   };
 
-  const handleDownload = () => {
-    // Create report data
-    const reportData = {
-      generatedAt: new Date().toISOString(),
-      dateRange: selectedDate,
-      statistics: stats,
-      recentLeads: recentLeads,
-      upcomingVisits: upcomingVisits,
-      totalLeads: parseInt(stats[1].value),
-      totalDeals: parseInt(stats[0].value),
-      upcomingVisitsCount: parseInt(stats[2].value),
-      followupsCount: parseInt(stats[3].value)
-    };
-
-    // Download as JSON
-    const blob = new Blob([JSON.stringify(reportData, null, 2)], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `dashboard-report-${selectedDate.toLowerCase().replace(/\s+/g, '-')}.json`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  };
 
   // Get tag class based on requirement and status
   const getRequirementClass = (requirement) => {
@@ -382,33 +357,39 @@ const AgentDashboard = () => {
               </div>
             )}
           </div>
-          <button className="agent-download-btn" onClick={handleDownload}>
-            <img src="/assets/download.svg" alt="Download" />
-            Download
-          </button>
+        
         </div>
       </div>
 
       <div className="agent-stats-grid">
-        {stats.map((stat, index) => (
-          <div key={index} className="agent-stat-card">
-            <div className="agent-stat-header">
-              <h3 className="agent-stat-title">{stat.title}</h3>
-              <div className={`agent-stat-icon-wrapper ${stat.iconBg}`}>
-                <img
-                  src={stat.icon}
-                  alt={stat.title}
-                  className="agent-stat-icon"
-                />
-              </div>
-            </div>
-            <div className="agent-stat-content">
-              <div className="agent-stat-value">{stat.value}</div>
-              <div className="agent-stat-trend positive">↑ {stat.trend}</div>
-            </div>
-          </div>
-        ))}
+  {stats.map((stat, index) => (
+    <div key={index} className="agent-stat-card">
+
+      <div className="agent-stat-content">
+        <p className="agent-stat-label">{stat.title}</p>
+
+        <h2 className="agent-stat-value">{stat.value}</h2>
+
+        <p
+          className={`agent-stat-trend ${
+            stat.trend.startsWith("+") ? "positive" : "negative"
+          }`}
+        >
+          {stat.trend}
+        </p>
       </div>
+
+      <div className={`agent-stat-icon-wrapper ${stat.iconBg}`}>
+        <img
+          src={stat.icon}
+          alt={stat.title}
+          className="agent-stat-icon"
+        />
+      </div>
+
+    </div>
+  ))}
+</div>
 
       <div className="agent-dashboard-split-content">
         {/* Recent Leads Section */}

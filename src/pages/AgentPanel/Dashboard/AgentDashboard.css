@@ -167,70 +167,78 @@
   height: 16px;
 }
 
-.agent-stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 16px;
-  margin-bottom: 24px;
-}
-.agent-stat-card {
-  background: #ffffff;
-  border-radius: 12px;
-  border: 1px solid #d7d7d7;
-  padding: 24px;
-  min-height: 120px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.agent-stats-grid{
+  display:flex;
+  gap:34px;
+  flex-wrap:wrap;
+  margin-top:40px;
 }
 
-.agent-stat-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 8px;
+.agent-stat-card{
+  width:256px;
+  height:128px;
+  background:#ffffff;
+  border:1px solid #eaecf0;
+  border-radius:9px;
+  padding:18px 13px 18px 15px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
 }
 
-.agent-stat-title {
-  margin: 0;
-  font-size: 14px;
-  font-weight: 400;
-  color: #374151;
+.agent-stat-content{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
 }
 
-.agent-stat-icon-wrapper {
-  width: 48px;
-  height: 48px;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
+.agent-stat-label{
+  font-size:14px;
+  color:#667085;
 }
 
-.agent-stat-icon-wrapper.blue {
+.agent-stat-value{
+  font-size:24px;
+  font-weight:600;
+  color:#000;
+}
+
+.agent-stat-trend{
+  font-size:12px;
+  font-weight:500;
+}
+
+.agent-stat-trend.positive{
+  color:#12b76a;
+}
+
+.agent-stat-trend.negative{
+  color:#ef4444;
+}
+
+.agent-stat-icon-wrapper{
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+
+.agent-stat-icon{
+  margin-top:26px;
+  width:46px;
+  height:46px;
+}
+
+
+/* .agent-stat-icon-wrapper.blue {
   background: #d0e4ff;
-}
+} */
 
-.agent-stat-icon-wrapper.green {
-  background: #d1fadf;
-}
 
-.agent-stat-icon-wrapper.purple {
-  background: #f3e8ff;
-}
-
-.agent-stat-icon-wrapper.red {
-  background: #fee4e2;
-}
-
-.agent-stat-icon {
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 .agent-stat-content {
   display: flex;
@@ -240,8 +248,8 @@
 }
 
 .agent-stat-value {
-  font-size: 32px;
-  font-weight: 600;
+  font-size: 17px;
+  font-weight: 400;
   color: #000000;
 }
 
@@ -266,6 +274,7 @@
 
 .agent-recent-leads,
 .agent-upcoming-visits {
+  margin-top:30px;
   background: #ffffff;
   border-radius: 12px;
   padding: 24px;
