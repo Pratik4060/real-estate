@@ -49,7 +49,6 @@ const Leads = () => {
   useEffect(() => {
     loadLeadsData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-
   }, []);
 
   // Handle window resize
@@ -489,17 +488,19 @@ const Leads = () => {
   return (
     <div className="leads-container admin-leads-page">
       <div className="leads-content">
-        {/* Header Section */}
         <div className="leads-header">
-          <div className="leads-header-left">
-            <h1 className="leads-title">Leads</h1>
-            <p className="leads-subtitle">Manage and track all leads </p>
-          </div>
-          <button className="add-leads-btn" onClick={openAddModal}>
-            <span className="plus-icon">+</span>
-            Add Leads
-          </button>
-        </div>
+  <div className="leads-header-left">
+    <h1 className="leads-title">Leads</h1>
+    <p className="leads-subtitle">Manage and track all leads</p>
+  </div>
+</div>
+
+<div className="add-leads-row">
+  <button className="add-leads-btn" onClick={openAddModal}>
+    <span className="plus-icon">+</span>
+    Add Leads
+  </button>
+</div>
 
         {/* White Card Section */}
         <div className="leads-card">
