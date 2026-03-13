@@ -1,16 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { getAssetPath } from "../../../utils/assetPath";
 import "./AgentDashboard.css";
 
 // Import SVGs from public directory (same as admin Dashboard)
-const totalLeadsIcon = getAssetPath("Total Leads.svg");
-const conformedLeadsIcon = getAssetPath("Conformed Leads.svg");
-const dealsClosedIcon = getAssetPath("Deals Closed.svg");
-// const siteVisitsIcon = getAssetPath("Total Leads.svg");
-const calendarIcon = getAssetPath("calendar.svg");
-const dropdownIcon = getAssetPath("dropdown.svg");
-const downloadIcon = getAssetPath("download.svg");
-const followupsIcon = getAssetPath("followups.svg");
 
 const AgentDashboard = () => {
   const [selectedDate, setSelectedDate] = useState("Last Week");
@@ -23,28 +14,28 @@ const AgentDashboard = () => {
       title: "Total Deals",
       value: "0",
       trend: "+0%",
-      icon: dealsClosedIcon,
+      icon: "/assets/Deals Closed.svg",
       iconBg: "blue",
     },
     {
       title: "Assigned Leads",
       value: "0",
       trend: "+0%",
-      icon: totalLeadsIcon,
+      icon: "/assets/Total Leads.svg",
       iconBg: "green",
     },
     {
       title: "Upcoming Visits",
       value: "0",
       trend: "+0%",
-      icon: conformedLeadsIcon,
+      icon: "/assets/Conformed Leads.svg",
       iconBg: "purple",
     },
     {
       title: "Follow-ups",
       value: "0",
       trend: "+0%",
-      icon: followupsIcon,
+      icon: "/assets/followups.svg",
       iconBg: "green",
     },
   ]);
@@ -152,28 +143,28 @@ const AgentDashboard = () => {
         title: "Total Deals",
         value: totalDeals.toString(),
         trend: dealsTrend,
-        icon: dealsClosedIcon,
+        icon: "/assets/Deals Closed.svg",
         iconBg: "blue",
       },
       {
         title: "Assigned Leads",
         value: assignedLeads.toString(),
         trend: leadsTrend,
-        icon: totalLeadsIcon,
+        icon: "/assets/Total Leads.svg",
         iconBg: "green",
       },
       {
         title: "Upcoming Visits",
         value: upcomingVisits.toString(),
         trend: visitsTrend,
-        icon: conformedLeadsIcon,
+        icon: "/assets/Upcoming Visits.svg",
         iconBg: "purple",
       },
       {
         title: "Follow-ups",
         value: followups.toString(),
         trend: followupsTrend,
-        icon: followupsIcon,
+        icon: "/assets/followups.svg",
         iconBg: "green",
       },
     ]);
@@ -372,7 +363,7 @@ const AgentDashboard = () => {
               <img src="/assets/calendar.svg" alt="Calendar" className="agent-calendar-icon" />
               {selectedDate}
               <img
-                src={dropdownIcon}
+                src="/assets/dropdown.svg"
                 alt="Dropdown"
                 className="agent-dropdown-icon"
               />
@@ -392,7 +383,7 @@ const AgentDashboard = () => {
             )}
           </div>
           <button className="agent-download-btn" onClick={handleDownload}>
-            <img src={downloadIcon} alt="Download" />
+            <img src="/assets/download.svg" alt="Download" />
             Download
           </button>
         </div>

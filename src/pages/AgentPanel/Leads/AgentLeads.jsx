@@ -281,7 +281,7 @@ const AgentLeads = () => {
           {/* SEARCH AND FILTER */}
           <div className="leads-filters">
             <div className="search-container">
-              <img src={getAssetPath("search.svg")} alt="Search" className="search-icon" />
+              <img src="/assets/search.svg" alt="Search" className="search-icon" />
               <input
                 type="text"
                 placeholder="Search lead by name, phone, email..."
@@ -299,11 +299,11 @@ const AgentLeads = () => {
                 >
                   <div className="filter-btn-content">
 
-                    <img src={getAssetPath("filter-icon.svg")} alt="Filter" className="filter-icon" />
+                    <img src="/assets/filter-icon.svg" alt="Filter" className="filter-icon" />
                     <span>{statusFilter}</span>
                   </div>
                   <img 
-                    src={getAssetPath("dropdown.svg")} 
+                    src="/assets/dropdown.svg"
                     alt="Dropdown" 
                     className={`dropdown-arrow ${showFilterDropdown ? 'open' : ''}`}
                   />
@@ -329,7 +329,7 @@ const AgentLeads = () => {
                 onClick={handleDeleteSelected}
                 disabled={selectedRows.length === 0}
               >
-                <img src={getAssetPath("deletebutton.svg")} alt="Delete" className="delete-icon" />
+                <img src="/assets/deletebutton.svg" alt="Delete" className="delete-icon" />
                 Delete ({selectedRows.length})
               </button>
             </div>
@@ -357,12 +357,12 @@ const AgentLeads = () => {
                       <span>Lead Name</span>
                       <div className="sort-icons">
                         <img 
-                          src={getAssetPath("ChevronLeft.svg")}
+                          src="/assets/ChevronLeft.svg"
                           alt="Sort" 
                           className={`sort-icon ${sortConfig.key === 'name' && sortConfig.direction === 'asc' ? 'active' : ''}`}
                         />
                         <img 
-                          src={getAssetPath("ChevronRight.svg")} 
+                          src="/assets/ChevronRight.svg" 
                           alt="Sort" 
                           className={`sort-icon ${sortConfig.key === 'name' && sortConfig.direction === 'desc' ? 'active' : ''}`}
                         />
@@ -374,12 +374,12 @@ const AgentLeads = () => {
                       <span>Email Address</span>
                       <div className="sort-icons">
                         <img 
-                          src={getAssetPath("ChevronLeft.svg")}
+                          src="/assets/ChevronLeft.svg"
                           alt="Sort" 
                           className={`sort-icon ${sortConfig.key === 'email' && sortConfig.direction === 'asc' ? 'active' : ''}`}
                         />
                         <img 
-                          src={getAssetPath("ChevronRight.svg")} 
+                          src="/assets/ChevronRight.svg" 
                           alt="Sort" 
                           className={`sort-icon ${sortConfig.key === 'email' && sortConfig.direction === 'desc' ? 'active' : ''}`}
                         />
@@ -391,12 +391,12 @@ const AgentLeads = () => {
                       <span>Phone</span>
                       <div className="sort-icons">
                         <img 
-                          src={getAssetPath("ChevronLeft.svg")} 
+                          src="/assets/ChevronLeft.svg"
                           alt="Sort" 
                           className={`sort-icon ${sortConfig.key === 'phone' && sortConfig.direction === 'asc' ? 'active' : ''}`}
                         />
                         <img 
-                          src={getAssetPath("ChevronRight.svg")} 
+                          src="/assets/ChevronRight.svg" 
                           alt="Sort" 
                           className={`sort-icon ${sortConfig.key === 'phone' && sortConfig.direction === 'desc' ? 'active' : ''}`}
                         />
@@ -408,12 +408,12 @@ const AgentLeads = () => {
                       <span>Requirement</span>
                       <div className="sort-icons">
                         <img 
-                          src={getAssetPath("ChevronLeft.svg")} 
+                          src="/assets/ChevronLeft.svg" 
                           alt="Sort" 
                           className={`sort-icon ${sortConfig.key === 'requirement' && sortConfig.direction === 'asc' ? 'active' : ''}`}
                         />
                         <img 
-                          src={getAssetPath("ChevronRight.svg")} 
+                          src="/assets/ChevronRight.svg" 
                           alt="Sort" 
                           className={`sort-icon ${sortConfig.key === 'requirement' && sortConfig.direction === 'desc' ? 'active' : ''}`}
                         />
@@ -425,12 +425,12 @@ const AgentLeads = () => {
                       <span>Budget</span>
                       <div className="sort-icons">
                         <img 
-                          src={getAssetPath("ChevronLeft.svg")} 
+                          src="/assets/ChevronLeft.svg" 
                           alt="Sort" 
                           className={`sort-icon ${sortConfig.key === 'budget' && sortConfig.direction === 'asc' ? 'active' : ''}`}
                         />
                         <img 
-                          src={getAssetPath("ChevronRight.svg")} 
+                          src="/assets/ChevronRight.svg" 
                           alt="Sort" 
                           className={`sort-icon ${sortConfig.key === 'budget' && sortConfig.direction === 'desc' ? 'active' : ''}`}
                         />
@@ -442,12 +442,12 @@ const AgentLeads = () => {
                       <span>Location</span>
                       <div className="sort-icons">
                         <img 
-                          src={getAssetPath("ChevronLeft.svg")} 
+                          src="/assets/ChevronLeft.svg" 
                           alt="Sort" 
                           className={`sort-icon ${sortConfig.key === 'location' && sortConfig.direction === 'asc' ? 'active' : ''}`}
                         />
                         <img 
-                          src={getAssetPath("ChevronRight.svg")} 
+                          src="/assets/ChevronRight.svg" 
                           alt="Sort" 
                           className={`sort-icon ${sortConfig.key === 'location' && sortConfig.direction === 'desc' ? 'active' : ''}`}
                         />
@@ -460,13 +460,13 @@ const AgentLeads = () => {
                       <div className="sort-icons">
                         <img 
 
-                          src={getAssetPath("ChevronLeft.svg")} 
+                          src="/assets/ChevronLeft.svg" 
                           alt="Sort" 
                           className={`sort-icon ${sortConfig.key === 'agent' && sortConfig.direction === 'asc' ? 'active' : ''}`}
                         />
                         <img 
 
-                          src={getAssetPath("ChevronRight.svg")} 
+                          src="/assets/ChevronRight.svg" 
                           alt="Sort" 
                           className={`sort-icon ${sortConfig.key === 'agent' && sortConfig.direction === 'desc' ? 'active' : ''}`}
                         />
@@ -478,13 +478,13 @@ const AgentLeads = () => {
                       <span>Follow-up</span>
                       <div className="sort-icons">
                         <img 
-                          src={getAssetPath("ChevronLeft.svg")} 
+                          src="/assets/ChevronLeft.svg" 
                           alt="Sort" 
                           className={`sort-icon ${sortConfig.key === 'followUp' && sortConfig.direction === 'asc' ? 'active' : ''}`}
                         />
                         <img 
 
-                          src={getAssetPath("ChevronRight.svg")} 
+                          src="/assets/ChevronRight.svg" 
                           alt="Sort" 
                           className={`sort-icon ${sortConfig.key === 'followUp' && sortConfig.direction === 'desc' ? 'active' : ''}`}
                         />
@@ -497,13 +497,13 @@ const AgentLeads = () => {
                       <div className="sort-icons">
                         <img 
 
-                          src={getAssetPath("ChevronLeft.svg")} 
+                          src="/assets/ChevronLeft.svg" 
                           alt="Sort" 
                           className={`sort-icon ${sortConfig.key === 'leadType' && sortConfig.direction === 'asc' ? 'active' : ''}`}
                         />
                         <img 
 
-                          src={getAssetPath("ChevronRight.svg")} 
+                          src="/assets/ChevronRight.svg" 
                           alt="Sort" 
                           className={`sort-icon ${sortConfig.key === 'leadType' && sortConfig.direction === 'desc' ? 'active' : ''}`}
                         />
@@ -560,7 +560,7 @@ const AgentLeads = () => {
                               title="View"
                               onClick={() => handleViewLead(lead)}
                             >
-                              <img src={getAssetPath("eye-icon.svg")} alt="view" />
+                              <img src="/assets/eye-icon.svg" alt="view" />
                             </button>
                             <button
                               className="action-btn delete"
@@ -568,7 +568,7 @@ const AgentLeads = () => {
                               onClick={() => handleDeleteRow(lead.id)}
                             >
 
-                              <img src={getAssetPath("delete.svg")} alt="delete" />
+                              <img src="/assets/delete.svg" alt="delete" />
                             </button>
                           </div>
                         </td>
@@ -600,7 +600,7 @@ const AgentLeads = () => {
                   onClick={() => setCurrentPage(currentPage - 1)}
                   disabled={currentPage === 1}
                 >
-                  <img src={getAssetPath("PreviousIcon.svg")} alt="Previous" />
+                  <img src="/assets/PreviousIcon.svg" alt="Previous" />
                   <span>Previous</span>
                 </button>
 
@@ -629,7 +629,7 @@ const AgentLeads = () => {
                 >
                   <span>Next</span>
 
-                  <img src={getAssetPath("NextIcon.svg")} alt="Next" />
+                  <img src="/assets/NextIcon.svg" alt="Next" />
                 </button>
               </div>
             </div>

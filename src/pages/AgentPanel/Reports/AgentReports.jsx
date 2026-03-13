@@ -367,9 +367,9 @@ const AgentReports = () => {
             className="filter-btnn"
             onClick={() => setShowDateDropdown(!showDateDropdown)}
           >
-            <img src={calendarIcon} alt="calendar" className="calendar-icon" />
+            <img src="/assets/calendar-icon.svg" alt="calendar" className="calendar-icon" />
             <span className="filter-text">{selectedDate}</span>
-            <img src={dropdownIcon} alt="dropdown" className="dropdown-arrow" />
+            <img src="/assets/dropdown-icon.svg" alt="dropdown" className="dropdown-arrow" />
           </button>
 
           {showDateDropdown && (
@@ -393,7 +393,7 @@ const AgentReports = () => {
         <div className="card-header">
           <h2 className="card-title">Rent vs Buy Distribution ({selectedDate})</h2>
           <button className="download-icon-btn" onClick={() => handleDownload('Rent-vs-Buy')}>
-            <img src={downloadIcon} alt="download" className="download-icon" />
+            <img src="/assets/download-icon.svg" alt="download" className="download-icon" />
           </button>
         </div>
 
@@ -495,7 +495,7 @@ const AgentReports = () => {
         <div className="card-header">
           <h2 className="card-title">Lead Conversion Rate ({selectedDate})</h2>
           <button className="download-icon-btn" onClick={() => handleDownload('Conversion-Rate')}>
-            <img src={downloadIcon} alt="download" className="download-icon" />
+            <img src="/assets/download-icon.svg" alt="download" className="download-icon" />
           </button>
         </div>
 

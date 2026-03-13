@@ -302,7 +302,7 @@ const AgentSiteVisits = () => {
           {/* Search Row */}
           <div className="visits-filters">
             <div className="search-container">
-              <img src={getAssetPath("search.svg")} alt="Search" className="search-icon" />
+              <img src="/assets/search-icon.svg" alt="Search" className="search-icon" />
               <input
                 type="text"
                 placeholder="Search by client name, property, agent..."
@@ -318,7 +318,7 @@ const AgentSiteVisits = () => {
               disabled={selectedRows.length === 0}
             >
 
-              <img src={getAssetPath("deletebutton.svg")} alt="Delete" className="delete-icon" />
+              <img src="/assets/delete-icon.svg" alt="Delete" className="delete-icon" />
               Delete ({selectedRows.length})
             </button>
           </div>
@@ -342,13 +342,13 @@ const AgentSiteVisits = () => {
                       <div className="sort-icons">
                         <img 
 
-                          src={getAssetPath("ChevronLeft.svg")}
+                          src="/assets/ChevronLeft.svg"
                           alt="Sort" 
                           className={`sort-icon ${sortConfig.key === 'clientName' && sortConfig.direction === 'asc' ? 'active' : ''}`}
                         />
                         <img 
 
-                          src={getAssetPath("ChevronRight.svg")} 
+                          src="/assets/ChevronRight.svg"
                           alt="Sort" 
                           className={`sort-icon ${sortConfig.key === 'clientName' && sortConfig.direction === 'desc' ? 'active' : ''}`}
                         />
@@ -360,13 +360,13 @@ const AgentSiteVisits = () => {
                       <span>Property Name</span>
                       <div className="sort-icons">
                         <img 
-                          src={getAssetPath("ChevronLeft.svg")} 
+                          src="/assets/ChevronLeft.svg"
                           alt="Sort" 
                           className={`sort-icon ${sortConfig.key === 'propertyName' && sortConfig.direction === 'asc' ? 'active' : ''}`}
                         />
                         <img 
 
-                          src={getAssetPath("ChevronRight.svg")} 
+                          src="/assets/ChevronRight.svg"
                           alt="Sort" 
                           className={`sort-icon ${sortConfig.key === 'propertyName' && sortConfig.direction === 'desc' ? 'active' : ''}`}
                         />
@@ -379,13 +379,13 @@ const AgentSiteVisits = () => {
                       <div className="sort-icons">
                         <img 
 
-                          src={getAssetPath("ChevronLeft.svg")} 
+                          src="/assets/ChevronLeft.svg"
                           alt="Sort" 
                           className={`sort-icon ${sortConfig.key === 'visitDate' && sortConfig.direction === 'asc' ? 'active' : ''}`}
                         />
                         <img 
 
-                          src={getAssetPath("ChevronRight.svg")} 
+                          src="/assets/ChevronRight.svg"
                           alt="Sort" 
                           className={`sort-icon ${sortConfig.key === 'visitDate' && sortConfig.direction === 'desc' ? 'active' : ''}`}
                         />
@@ -398,12 +398,12 @@ const AgentSiteVisits = () => {
                       <div className="sort-icons">
                         <img 
 
-                          src={getAssetPath("ChevronLeft.svg")} 
+                          src="/assets/ChevronLeft.svg"
                           alt="Sort" 
                           className={`sort-icon ${sortConfig.key === 'visitTime' && sortConfig.direction === 'asc' ? 'active' : ''}`}
                         />
                         <img 
-                          src={getAssetPath("ChevronRight.svg")} 
+                          src="/assets/ChevronRight.svg"
                           alt="Sort" 
                           className={`sort-icon ${sortConfig.key === 'visitTime' && sortConfig.direction === 'desc' ? 'active' : ''}`}
                         />
@@ -416,13 +416,13 @@ const AgentSiteVisits = () => {
                       <div className="sort-icons">
                         <img 
 
-                          src={getAssetPath("ChevronLeft.svg")} 
+                          src="/assets/ChevronLeft.svg"
                           alt="Sort" 
                           className={`sort-icon ${sortConfig.key === 'agent' && sortConfig.direction === 'asc' ? 'active' : ''}`}
                         />
                         <img 
 
-                          src={getAssetPath("ChevronRight.svg")} 
+                          src="/assets/ChevronRight.svg"
                           alt="Sort" 
                           className={`sort-icon ${sortConfig.key === 'agent' && sortConfig.direction === 'desc' ? 'active' : ''}`}
                         />
@@ -473,7 +473,7 @@ const AgentSiteVisits = () => {
                               onClick={() => handleEditClick(visit)}
                             >
 
-                              <img src={getAssetPath("edit.svg")} alt="Edit" />
+                              <img src="/assets/edit-icon.svg" alt="Edit" />
                             </button>
                             <button 
                               className="action-btn delete" 
@@ -481,7 +481,7 @@ const AgentSiteVisits = () => {
                               onClick={() => handleDeleteSingle(visit.id)}
                             >
 
-                              <img src={getAssetPath("delete.svg")} alt="Delete" />
+                              <img src="/assets/delete-icon.svg" alt="Delete" />
                             </button>
                           </div>
                         </td>
@@ -512,7 +512,7 @@ const AgentSiteVisits = () => {
                   disabled={currentPage === 1}
                 >
 
-                  <img src={getAssetPath("PreviousIcon.svg")} alt="Previous" />
+                  <img src="/assets/PreviousIcon.svg" alt="Previous" />
                   <span>Previous</span>
                 </button>
 
@@ -537,7 +537,7 @@ const AgentSiteVisits = () => {
                 >
                   <span>Next</span>
 
-                  <img src={getAssetPath("NextIcon.svg")} alt="Next" />
+                  <img src="/assets/NextIcon.svg" alt="Next" />
                 </button>
               </div>
             </div>
