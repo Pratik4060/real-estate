@@ -1,7 +1,7 @@
 ﻿.dashboard {
   width: 100%;
   background: #EFF6FF;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   padding: 24px;
   box-sizing: border-box;
 }
@@ -18,14 +18,14 @@
 
 .welcome-title {
   font-size: 32px;
-  font-weight: 600;
+  font-weight: 500;
   color: #000000;
   margin: 0 0 4px 0;
   line-height: 1.2;
 }
 
 .welcome-subtitle {
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 300;
   color: #000000;
   margin: 0;
@@ -46,7 +46,7 @@
   border: 1px solid #eaecf0;
   border-radius: 8px;
   cursor: pointer;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   color: #344054;
   transition: all 0.2s ease;
@@ -99,7 +99,7 @@
   background: transparent;
   border: none;
   text-align: left;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   color: #344054;
   cursor: pointer;
@@ -164,8 +164,8 @@
 }
 
 .stat-value {
-  font-size: 24px;
-  font-weight: 600;
+  font-size: 17px;
+  font-weight: 400;
   color: #000000;
   margin: 4px 0;
   line-height: 1.2;
@@ -224,8 +224,8 @@
 }
 
 .section-title {
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 17px;
+  font-weight: 500;
   color: #000000;
   margin: 0;
   line-height: 1.4;

@@ -1,7 +1,7 @@
 .agent-dashboard-container {
   width: 100%;
   background: #eff6ff;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   padding: 24px;
   box-sizing: border-box;
 }
@@ -90,7 +90,7 @@
   border: 1px solid #eaecf0;
   border-radius: 8px;
   cursor: pointer;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   color: #000000;
   transition: all 0.2s ease;
@@ -126,7 +126,7 @@
   background: none;
   text-align: left;
   cursor: pointer;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   color: #000000;
   transition: background 0.2s ease;
@@ -151,7 +151,7 @@
   border: none;
   border-radius: 8px;
   color: #ffffff;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;

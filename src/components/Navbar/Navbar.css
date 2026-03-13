@@ -114,7 +114,7 @@
   padding: 0 4px;
   background: #f04438;
   color: white;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 10px;
   font-weight: 600;
   border-radius: 8px;
@@ -151,7 +151,7 @@
 }
 
 .admin-navbar .notifications-header h3{
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 600;
   color: #1b1f25;
@@ -159,7 +159,7 @@
 }
 
 .admin-navbar .mark-all-seen-btn{
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-weight: 500;
   color: #155dfc;
@@ -215,7 +215,7 @@
 }
 
 .admin-navbar .notification-message{
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: 500;
   color: #1b1f25;
@@ -224,7 +224,7 @@
 }
 
 .admin-navbar .notification-time{
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-weight: 400;
   color: #667085;
@@ -236,7 +236,7 @@
 }
 
 .admin-navbar .notification-empty p{
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   color: #667085;
   margin: 0;
@@ -260,7 +260,7 @@
   margin: 0;
   color: #1c1c1c;
   padding-right: 13px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .admin-navbar .admin-avatar{
@@ -275,7 +275,7 @@
   font-size: 16px;
   font-weight: 600;
   user-select: none;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 /* Desktop Responsive */

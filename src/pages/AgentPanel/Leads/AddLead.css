@@ -8,7 +8,7 @@
   padding: 20px 30px;
   background: #f1f5fb;
   min-height: 100vh;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 /* Header */
@@ -67,8 +67,8 @@
 
 /* Section Titles */
 .section-title {
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 17px;
+  font-weight: 500;
   color: #111827;
   margin-bottom: 18px;
 }

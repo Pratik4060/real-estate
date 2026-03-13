@@ -3,7 +3,7 @@
   width: 100%;
   min-height: 100vh;
   background: #EFF6FF;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .visits-content {
@@ -23,14 +23,14 @@
   font-weight: 600;
   color: #000000;
   margin: 0 0 4px 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .visits-header-left p {
   font-size: 16px;
   color: #000000;
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 /* White Card */
@@ -74,7 +74,7 @@
   padding: 0 12px 0 40px;
   border: 1px solid #d0d5dd;
   border-radius: 8px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   outline: none;
   transition: all 0.2s ease;
@@ -99,7 +99,7 @@
   height: 40px;
   background: #dc2626;
   border-radius: 8px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: 500;
   color: white;
@@ -167,7 +167,7 @@
   width: 100%;
   border-collapse: collapse;
   min-width: 1400px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .visits-table thead {
@@ -363,7 +363,7 @@
 .pagination-info {
   font-size: 14px;
   color: #6b7280;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .pagination-controls {
@@ -382,7 +382,7 @@
   background: white;
   border: 1px solid #d1d5db;
   border-radius: 6px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   color: #374151;
   cursor: pointer;
@@ -410,7 +410,7 @@
   border: 1px solid #d1d5db;
   border-radius: 6px;
   background: white;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   color: #374151;
   cursor: pointer;
@@ -474,13 +474,13 @@
 .delete-confirm-modal h3 {
   margin-bottom: 15px;
   color: #333;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .delete-confirm-modal p {
   margin-bottom: 25px;
   color: #666;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .modal-header {
@@ -494,7 +494,7 @@
   font-size: 20px;
   font-weight: 600;
   color: #333;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   margin: 0;
 }
 
@@ -541,7 +541,7 @@
   font-weight: 400;
   color: #374151;
   font-size: 14px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .form-group input,
@@ -554,7 +554,7 @@
   padding: 0 12px;
   font-size: 14px;
   transition: border-color 0.3s;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   background: #ffffff;
   box-sizing: border-box;
 }
@@ -602,7 +602,7 @@
   cursor: pointer;
   transition: all 0.3s;
   min-width: 160px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .cancel-btn:hover {
@@ -620,7 +620,7 @@
   cursor: pointer;
   transition: background 0.3s;
   min-width: 160px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .submit-btn:hover {
@@ -638,7 +638,7 @@
   cursor: pointer;
   transition: background 0.3s;
   min-width: 100px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .delete-confirm-btn:hover {
@@ -755,7 +755,7 @@
 }
 
 .loading-container p {
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   color: #666;
 }
@@ -765,11 +765,11 @@
   text-align: center;
   padding: 40px !important;
   color: #666;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
 }
 
 /* Status Text */
 .status-text {
-  font-weight: 500;
+  font-weight: 400;
 }

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { getAssetPath } from "../../../utils/assetPath";
 import "./AgentLeads.css";
 import { useNavigate } from "react-router-dom";
 import ViewLeadModal from "./ViewLeadModal";

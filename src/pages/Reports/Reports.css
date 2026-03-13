@@ -2,7 +2,7 @@
 .admin-reports-page.reports{
   width: 100%;
   background: #EFF6FF;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   padding: 24px;
   box-sizing: border-box;
 }
@@ -79,7 +79,7 @@
 
 .admin-reports-page .card-title{
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 500;
   color: #000000;
   margin: 0;
   line-height: 1.4;
@@ -101,7 +101,7 @@
   border: 1px solid #eaecf0;
   border-radius: 6px;
   cursor: pointer;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 13px;
   color: #344054;
   transition: all 0.2s ease;

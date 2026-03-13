@@ -4,7 +4,7 @@
   width: 100%;
   min-height: 100vh;
   background: #EFF6FF;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .admin-leads-page .leads-content{
@@ -26,18 +26,18 @@
 }
 
 .admin-leads-page .leads-header-left h1{
-  font-size: 28px;
-  font-weight: 600;
+  font-size: 32px;
+  font-weight: 500;
   color: #000000;
   margin: 0 0 4px 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .admin-leads-page .leads-header-left p{
   font-size: 16px;
   color: #000000;
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .admin-leads-page .add-leads-btn{
@@ -45,10 +45,10 @@
   align-items: center;
   gap: 8px;
   padding: 15px 40px;
-  background: #155dfc;
-  border: 1px solid #155dfc;
+  background: #0C4EDF;
+  border: 1px solid #808080;
   border-radius: 8px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: 500;
   color: #ffffff;
@@ -102,12 +102,12 @@
 }
 
 .admin-leads-page .search-container input{
-  width: 100%;
-  height: 100%;
+  width: 534px;
+  height: 40px;
   padding: 0 12px 0 40px;
-  border: 1px solid #d0d5dd;
+  border: 1px solid #D1D1D1;
   border-radius: 8px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   outline: none;
   transition: all 0.2s ease;
@@ -147,7 +147,7 @@
   justify-content: space-between;
   padding: 0 12px;
   cursor: pointer;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   color: #344054;
   transition: all 0.2s ease;
@@ -195,7 +195,7 @@
   color: #344054;
   cursor: pointer;
   transition: background 0.2s ease;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .admin-leads-page .filter-option:hover{
@@ -216,7 +216,7 @@
   height: 40px;
   background: #dc2626;
   border-radius: 8px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: 500;
   color: white;
@@ -294,7 +294,7 @@
   width: 100%;
   border-collapse: collapse;
   min-width: 1600px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .admin-leads-page .leads-table thead{
@@ -302,8 +302,8 @@
 }
 
 .admin-leads-page .leads-table th{
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 400;
   color: #374151;
   text-align: left;
   border-right: 1px solid #eaecf0;
@@ -458,7 +458,7 @@
 
 /* Lead Name */
 .admin-leads-page .lead-name{
-  font-weight: 500;
+  font-weight: 400;
   color: #111827;
 }
 
@@ -561,7 +561,7 @@
 .admin-leads-page .pagination-info{
   font-size: 14px;
   color: #6b7280;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .admin-leads-page .pagination-controls{
@@ -580,7 +580,7 @@
   background: transparent;
   border: none;
   border-radius: 6px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   color: #374151;
   cursor: pointer;
@@ -609,7 +609,7 @@
   border: 1px solid #d1d5db;
   border-radius: 6px;
   background: white;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   color: #374151;
   cursor: pointer;
@@ -839,7 +839,7 @@
   border: 1px solid #d0d5dd;
   padding: 0 14px;
   font-size: 14px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   background: white;
   transition: all 0.2s ease;
 }

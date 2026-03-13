@@ -3,7 +3,7 @@
   width: 100%;
   min-height: 100vh;
   background: #EFF6FF;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .agent-leads-page .leads-content {
@@ -23,14 +23,14 @@
   font-weight: 600;
   color: #000000;
   margin: 0 0 4px 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .agent-leads-page .leads-header-left p {
   font-size: 16px;
   color: #000000;
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .agent-leads-page .add-leads-btn {
@@ -41,7 +41,7 @@
   background: #0C4EDF;
   border: 1px solid #808080;
   border-radius: 8px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 17px;
   font-weight: 500;
   color: #ffffff;
@@ -102,7 +102,7 @@
   padding: 0 12px 0 40px;
   border: 1px solid #d0d5dd;
   border-radius: 8px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   outline: none;
   transition: all 0.2s ease;
@@ -142,7 +142,7 @@
   justify-content: space-between;
   padding: 0 12px;
   cursor: pointer;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   color: #344054;
   transition: all 0.2s ease;
@@ -190,7 +190,7 @@
   color: #344054;
   cursor: pointer;
   transition: background 0.2s ease;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .agent-leads-page .filter-option:hover {
@@ -211,7 +211,7 @@
   height: 40px;
   background: #dc2626;
   border-radius: 8px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: 500;
   color: white;
@@ -289,7 +289,7 @@
   width: 100%;
   border-collapse: collapse;
   min-width: 1800px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .agent-leads-page .leads-table thead {
@@ -546,7 +546,7 @@
 .agent-leads-page .pagination-info {
   font-size: 14px;
   color: #6b7280;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .agent-leads-page .pagination-controls {
@@ -565,7 +565,7 @@
   background: white;
   border: 1px solid #d1d5db;
   border-radius: 6px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   color: #374151;
   cursor: pointer;
@@ -593,7 +593,7 @@
   border: 1px solid #d1d5db;
   border-radius: 6px;
   background: white;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   color: #374151;
   cursor: pointer;
@@ -625,7 +625,7 @@
   text-align: center;
   padding: 40px !important;
   color: #666;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
 }
 
@@ -636,7 +636,7 @@
 }
 
 .agent-leads-page .loading-container p {
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   color: #666;
 }
