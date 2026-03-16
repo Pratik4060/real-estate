@@ -318,7 +318,7 @@ const AgentSiteVisits = () => {
               disabled={selectedRows.length === 0}
             >
 
-              <img src="/assets/delete.svg" alt="Delete" className="delete-icon" />
+              <img src="/assets/deletebutton.svg" alt="Delete" className="delete-icon" />
               Delete ({selectedRows.length})
             </button>
           </div>

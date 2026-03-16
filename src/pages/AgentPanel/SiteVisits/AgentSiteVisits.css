@@ -20,8 +20,10 @@
 
 .visits-header-left h1 {
   font-size: 28px;
-  font-weight: 600;
+  font-weight: 500;
   color: #000000;
+  /* font: bold; */
+  gap: 4px;
   margin: 0 0 4px 0;
   font-family: "Roboto", sans-serif;
 }
@@ -120,12 +122,15 @@
 
 .delete-btn.disabled img {
   opacity: 0.5;
+  background: none;
 }
 
 .delete-icon {
   width: 16px;
   height: 16px;
   filter: brightness(0) invert(1);
+    background: none;
+
 }
 
 .delete-btn.disabled .delete-icon {
@@ -175,8 +180,8 @@
 }
 
 .visits-table th {
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 400;
   color: #374151;
   text-align: left;
   border-right: 1px solid #eaecf0;
@@ -268,7 +273,8 @@
 .visits-table td.actions-col {
   width: 150px;
   padding: 8px;
-  border-bottom: 1px solid #eaecf0;
+  justify-content: center;
+  /* border-bottom: 1px solid #eaecf0; */
 }
 
 /* Table Header Content */
@@ -320,7 +326,7 @@
 .action-buttons {
   display: flex;
   gap: 16px;
-  align-items: center;
+  justify-content: center;
 }
 
 .action-btn {
