@@ -104,7 +104,7 @@ const AgentLeads = () => {
     return matchesSearch && matchesStatus;
   });
 
-  /* SORT LEADS */
+
   const sortedLeads = [...filteredLeads].sort((a, b) => {
     if (!sortConfig.key) return 0;
     
@@ -175,11 +175,9 @@ const AgentLeads = () => {
     }
   };
 
-  /* DELETE MULTIPLE - Only from agent view, not from admin */
   const handleDeleteSelected = () => {
     if (selectedRows.length === 0) return;
     
-    // This only removes from agent view, not from admin data
     const updated = leadsData.filter(
       (lead) => !selectedRows.includes(lead.id)
     );

@@ -19,16 +19,16 @@
 }
 
 .agent-leads-page .leads-header-left h1 {
-  font-size: 28px;
-  font-weight: 600;
+  font-size: 32px;
+  font-weight: 500;
   color: #000000;
   margin: 0 0 4px 0;
   font-family: "Roboto", sans-serif;
 }
 
 .agent-leads-page .leads-header-left p {
-  font-size: 16px;
-  color: #000000;
+  font-size: 13px;
+  font-weight: 300;
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
@@ -297,9 +297,9 @@
 }
 
 .agent-leads-page .leads-table th {
-  font-size: 14px;
-  font-weight: 600;
-  color: #374151;
+  font-size: 15px;
+  font-weight: 400;
+  color: #14181F;
   text-align: left;
   border-right: 1px solid #eaecf0;
   border-bottom: 1px solid #eaecf0;
@@ -460,8 +460,9 @@
 
 /* Lead Name */
 .agent-leads-page .lead-name {
-  font-weight: 500;
-  color: #111827;
+  font-size: 15px;
+  font-weight: 400;
+
 }
 
 .agent-leads-page .lead-email {

@@ -25,11 +25,12 @@
   font-weight: 400;
 }
 
-/* Clickable Lead */
+
 .breadcrumb-light {
-  color: #9ca3af;
+  color: #9C9C9C;
   cursor: pointer;
   font-weight: 500;
+  font-size: 32px;
   transition: color 0.2s ease;
 }
 
@@ -44,8 +45,9 @@
 
 /* Active Page */
 .breadcrumb-active {
-  color: #111827;
-  font-weight: 600;
+  color: #000000;
+  font-weight: 500;
+  font-size: 32px;
 }
 
 /* Subtitle */
@@ -67,7 +69,7 @@
 
 /* Section Titles */
 .section-title {
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 500;
   color: #111827;
   margin-bottom: 18px;
@@ -89,8 +91,8 @@
 
 /* Labels */
 .form-group label {
-  font-size: 13px;
-  color: #374151;
+  font-size: 14px;
+  color: #202020;
   margin-bottom: 6px;
 }
 
@@ -101,10 +103,10 @@
   border: 1px solid #d1d5db;
   border-radius: 6px;
   padding: 0 14px;
-  font-size: 14px;
+  font-size: 15px;
   outline: none;
-  background: #ffffff;
-  transition: border 0.2s ease;
+  color: #2E2D2D;
+  font-family: "Roboto", sans-serif;
 }
 
 /* Placeholder */
