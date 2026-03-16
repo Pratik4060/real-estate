@@ -54,7 +54,7 @@ const AgentSidebar = ({ isOpen = false, onClose = () => {} }) => {
   return (
     <aside className={`sidebar ${isOpen ? "open" : ""}`}>
       <div className="sidebar-outer">
-        <div className="agent-sidebar-logo">
+        <div className="logo-section">
           <NavLink
             to="/agent/dashboard"
             className="logo-container"
