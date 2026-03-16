@@ -50,8 +50,8 @@
 }
 
 .agent-dashboard-title {
-  font-size: 28px;
-  font-weight: 600;
+  font-size: 32px;
+  font-weight: 500;
   color: #000000;
   margin: 0 0 4px 0;
 }
@@ -194,8 +194,9 @@
 }
 
 .agent-stat-label{
-  font-size:14px;
-  color:#667085;
+  font-size:17px;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
 }
 
 .agent-stat-value{
@@ -282,8 +283,9 @@
 }
 
 .agent-section-title {
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
   color: #111827;
   margin: 0 0 20px 0;
 }
@@ -312,9 +314,9 @@
 
 .agent-lead-name {
   margin: 0 0 4px 0;
-  font-size: 14px;
-  font-weight: 500;
-  color: #111827;
+  font-size: 17px;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
 }
 
 .agent-lead-location {

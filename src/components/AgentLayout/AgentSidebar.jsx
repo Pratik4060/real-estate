@@ -1,6 +1,5 @@
 import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import { getAssetPath } from "../../utils/assetPath";
 import "./AgentSidebar.css";
 
 const AgentSidebar = ({ isOpen = false, onClose = () => {} }) => {
