@@ -24,7 +24,7 @@
 /* Main Content - Scrollable Area */
 .agent-main-content {
   flex: 1;
-  padding: 24px 32px;
+  padding: 10px 10px;
   margin-top: 11px;
   background: #EFF6FF;
   height: calc(100vh - 79px);

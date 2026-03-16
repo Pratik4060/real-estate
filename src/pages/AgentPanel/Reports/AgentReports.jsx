@@ -325,7 +325,7 @@ const AgentReports = () => {
       <div className="reports">
         <div className="reports-header">
           <div>
-            <h1 className="reports-title">Reports</h1>
+            <h1 className="reports-title">Reports  </h1>
             <p className="reports-subtitle">Loading reports data...</p>
           </div>
         </div>
@@ -341,7 +341,7 @@ const AgentReports = () => {
       {/* Header Section */}
       <div className="reports-header">
         <div>
-          <h1 className="reports-title">Reports</h1>
+          <h1 className="reports-title">Reports & Analytics</h1>
           <p className="reports-subtitle">View business insights and performance metrics</p>
         </div>
       </div>
