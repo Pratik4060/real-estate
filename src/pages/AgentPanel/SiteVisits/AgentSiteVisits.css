@@ -314,12 +314,12 @@
 
 /* Client Name */
 .client-name {
-  font-weight: 500;
+  font-weight: 400;
   color: #111827;
 }
 
 .property-name {
-  font-weight: 500;
+  font-weight: 400;
 }
 
 /* Action Buttons */
@@ -778,4 +778,19 @@
 /* Status Text */
 .status-text {
   font-weight: 400;
+}
+
+
+@media (max-width: 768px) {
+
+  .search-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .search-container input {
+    width: 100%;
+    font-size: 13px;
+  }
+
 }

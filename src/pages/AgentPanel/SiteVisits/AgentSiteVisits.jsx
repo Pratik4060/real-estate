@@ -46,6 +46,7 @@ const AgentSiteVisits = () => {
     };
   }, []);
 
+
   // Handle window resize
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
@@ -303,7 +304,7 @@ const AgentSiteVisits = () => {
               <img src="/assets/search.svg" alt="Search" className="search-icon" />
               <input
                 type="text"
-                placeholder="Search by client name, property, agent..."
+                placeholder="Search by client name, property"
                 className="search-input"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}

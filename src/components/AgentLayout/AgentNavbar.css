@@ -377,7 +377,7 @@
   .agent-navbar .notifications-dropdown {
     right: 10px;        /* little padding from edge */
     left: auto;
-    width: 80vw;        /* full responsive */
+    width: 75vw;        /* full responsive */
     max-width: none;
     top: calc(100% + 10px);
   }
@@ -407,7 +407,7 @@
 
   /* Adjust right section */
   .agent-navbar .right-section{
-    gap: 12px;
+    gap: 17px;
   }
 
   /* Hide admin text on mobile */
