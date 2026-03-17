@@ -854,7 +854,7 @@ const Leads = () => {
       </div>
 
       {/* Add/Edit Modal */}
-{/* Add/Edit Modal */}
+      {/* Add/Edit Modal */}
 {showModal && (
   <div className="modal-overlay" onClick={() => setShowModal(false)}>
     <div className="modal-content" onClick={(e) => e.stopPropagation()}>
@@ -867,187 +867,289 @@ const Leads = () => {
 
       <form onSubmit={handleSubmit}>
 
-        {/* Row 1 */}
-        <div className="form-row">
-          <div className="form-group">
-            <label>Lead Name *</label>
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleInputChange}
-              placeholder="Enter Lead Name"
-              required
-            />
-          </div>
-
-          <div className="form-group">
-            <label>Phone *</label>
-            <input
-              type="tel"
-              name="phone"
-              value={formData.phone}
-              onChange={handleInputChange}
-              placeholder="Enter Phone Number"
-              required
-            />
-          </div>
-        </div>
-
-        {/* Row 2 */}
-        <div className="form-row">
-          <div className="form-group">
-            <label>Location</label>
-            <input
-              type="text"
-              name="location"
-              value={formData.location}
-              onChange={handleInputChange}
-              placeholder="eg Nanded City"
-            />
-          </div>
-
-          {modalMode === "add" ? (
-            <div className="form-group">
-              <label>Email ID</label>
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleInputChange}
-                placeholder="Enter Email ID"
-              />
-            </div>
-          ) : (
-            <div className="form-group">
-              <label>Budget</label>
-              <input
-                type="text"
-                name="budget"
-                value={formData.budget}
-                onChange={handleInputChange}
-                placeholder=" 35k / mo"
-              />
-            </div>
-          )}
-        </div>
-
-        {/* Row 3 */}
-        <div className="form-row">
-          <div className="form-group">
-            <label>Agent Name</label>
-            <input
-              type="text"
-              name="agent"
-              value={formData.agent}
-              onChange={handleInputChange}
-              placeholder="Enter Agent Name"
-            />
-          </div>
-
-          {modalMode === "add" ? (
-            <div className="form-group">
-              <label>Budget</label>
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleInputChange}
-                placeholder="Enter Email ID"
-              />
-            </div>
-          ) : (
-          <div className="form-group">
-            <label>Follow-up Date</label>
-            <input
-              type="date"
-              name="followUp"
-              value={formData.followUp}
-              onChange={handleInputChange}
-            />
-          </div>
-          )}
-        
-        </div>
-
-        {/* Row 4 */}
-        <div className="form-row">
-          <div className="form-group">
-            <label>Requirement Type</label>
-            <select
-              name="requirement"
-              value={formData.requirement}
-              onChange={handleInputChange}
-            >
-              {requirementOptions.map((option) => (
-                <option key={option}>{option}</option>
-              ))}
-            </select>
-          </div>
-
-          <div className="form-group">
-            <label>Lead Status</label>
-            <select
-              name="status"
-              value={formData.status}
-              onChange={handleInputChange}
-            >
-              {statusOptions
-                .filter((s) => s !== "All Status")
-                .map((option) => (
-                  <option key={option}>{option}</option>
-                ))}
-            </select>
-          </div>
-        </div>
-
-        {/* Verification (Edit Only) */}
-        {modalMode === "edit" && (
-          <div className="verification-section">
-            <label className="verification-title">Contact Verification</label>
-
-            <div className="verification-toggles">
-
-              <div className="toggle-group">
-                <span className="toggle-label">Mobile Verified</span>
-                <label className="toggle-switch">
-                  <input
-                    type="checkbox"
-                    checked={Verification.mobileVerified}
-                    onChange={() => handleVerificationChange("mobileVerified")}
-                  />
-                  <span className="toggle-slider"></span>
-                </label>
+        {modalMode === "add" ? (
+          /* ADD MODAL - Matches image exactly */
+          <>
+            {/* Row 1: Lead Name | Phone */}
+            <div className="form-row">
+              <div className="form-group">
+                <label>Lead Name *</label>
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  placeholder="Enter Lead Name"
+                  required
+                />
               </div>
 
-              <div className="toggle-group">
-                <span className="toggle-label">Lead Verified</span>
-                <label className="toggle-switch">
-                  <input
-                    type="checkbox"
-                    checked={Verification.leadVerified}
-                    onChange={() => handleVerificationChange("leadVerified")}
-                  />
-                  <span className="toggle-slider"></span>
-                </label>
+              <div className="form-group">
+                <label>Phone *</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  placeholder="Enter Phone Number"
+                  required
+                />
               </div>
-
-              <div className="toggle-group">
-                <span className="toggle-label">Email Valid</span>
-                <label className="toggle-switch">
-                  <input
-                    type="checkbox"
-                    checked={Verification.emailValid}
-                    onChange={() => handleVerificationChange("emailValid")}
-                  />
-                  <span className="toggle-slider"></span>
-                </label>
-              </div>
-
             </div>
-          </div>
+
+            {/* Row 2: Location | Email ID */}
+            <div className="form-row">
+              <div className="form-group">
+                <label>Location</label>
+                <input
+                  type="text"
+                  name="location"
+                  value={formData.location}
+                  onChange={handleInputChange}
+                  placeholder="eg Nanded City"
+                />
+              </div>
+
+              <div className="form-group">
+                <label>Email ID</label>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  placeholder="Enter Email ID"
+                />
+              </div>
+            </div>
+
+            {/* Row 3: Agent Name | Budget */}
+            <div className="form-row">
+              <div className="form-group">
+                <label>Agent Name</label>
+                <input
+                  type="text"
+                  name="agent"
+                  value={formData.agent}
+                  onChange={handleInputChange}
+                  placeholder="Enter Agent Name"
+                />
+              </div>
+
+              <div className="form-group">
+                <label>Budget</label>
+                <input
+                  type="text"
+                  name="budget"
+                  value={formData.budget}
+                  onChange={handleInputChange}
+                  placeholder="eg 75L or 35k"
+                />
+              </div>
+            </div>
+
+            {/* Row 4: Requirement Type | Follow-up Date */}
+            <div className="form-row">
+              <div className="form-group">
+                <label>Requirement Type</label>
+                <select
+                  name="requirement"
+                  value={formData.requirement}
+                  onChange={handleInputChange}
+                >
+                  {requirementOptions.map((option) => (
+                    <option key={option}>{option}</option>
+                  ))}
+                </select>
+              </div>
+
+              <div className="form-group">
+                <label>Follow-up Date</label>
+                <input
+                  type="date"
+                  name="followUp"
+                  value={formData.followUp}
+                  onChange={handleInputChange}
+                  placeholder="DD/MM/YYYY"
+                />
+              </div>
+            </div>
+
+            {/* Row 5: Lead Status | (empty) */}
+            <div className="form-row">
+              <div className="form-group">
+                <label>Lead Status</label>
+                <select
+                  name="status"
+                  value={formData.status}
+                  onChange={handleInputChange}
+                >
+                  {statusOptions
+                    .filter((s) => s !== "All Status")
+                    .map((option) => (
+                      <option key={option}>{option}</option>
+                    ))}
+                </select>
+              </div>
+              <div className="form-group">
+                {/* Empty div for layout alignment */}
+              </div>
+            </div>
+          </>
+        ) : (
+          /* EDIT MODAL - Keep as is */
+          <>
+            {/* Row 1: Lead Name | Phone */}
+            <div className="form-row">
+              <div className="form-group">
+                <label>Lead Name *</label>
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  placeholder="Enter Lead Name"
+                  required
+                />
+              </div>
+
+              <div className="form-group">
+                <label>Phone *</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  placeholder="Enter Phone Number"
+                  required
+                />
+              </div>
+            </div>
+
+            {/* Row 2: Location | Budget */}
+            <div className="form-row">
+              <div className="form-group">
+                <label>Location</label>
+                <input
+                  type="text"
+                  name="location"
+                  value={formData.location}
+                  onChange={handleInputChange}
+                  placeholder="eg Nanded City"
+                />
+              </div>
+
+              <div className="form-group">
+                <label>Budget</label>
+                <input
+                  type="text"
+                  name="budget"
+                  value={formData.budget}
+                  onChange={handleInputChange}
+                  placeholder="eg 75L or 35k"
+                />
+              </div>
+            </div>
+
+            {/* Row 3: Agent Name | Follow-up Date */}
+            <div className="form-row">
+              <div className="form-group">
+                <label>Agent Name</label>
+                <input
+                  type="text"
+                  name="agent"
+                  value={formData.agent}
+                  onChange={handleInputChange}
+                  placeholder="Enter Agent Name"
+                />
+              </div>
+
+              <div className="form-group">
+                <label>Follow-up Date</label>
+                <input
+                  type="date"
+                  name="followUp"
+                  value={formData.followUp}
+                  onChange={handleInputChange}
+                  placeholder="DD/MM/YYYY"
+                />
+              </div>
+            </div>
+
+            {/* Row 4: Requirement Type | Lead Status */}
+            <div className="form-row">
+              <div className="form-group">
+                <label>Requirement Type</label>
+                <select
+                  name="requirement"
+                  value={formData.requirement}
+                  onChange={handleInputChange}
+                >
+                  {requirementOptions.map((option) => (
+                    <option key={option}>{option}</option>
+                  ))}
+                </select>
+              </div>
+
+              <div className="form-group">
+                <label>Lead Status</label>
+                <select
+                  name="status"
+                  value={formData.status}
+                  onChange={handleInputChange}
+                >
+                  {statusOptions
+                    .filter((s) => s !== "All Status")
+                    .map((option) => (
+                      <option key={option}>{option}</option>
+                    ))}
+                </select>
+              </div>
+            </div>
+
+            {/* Contact Verification Section (Edit Only) */}
+            <div className="verification-section">
+              <label className="verification-title">Contact Verification</label>
+
+              <div className="verification-toggles">
+                <div className="toggle-group">
+                  <span className="toggle-label">Mobile Verified</span>
+                  <label className="toggle-switch">
+                    <input
+                      type="checkbox"
+                      checked={Verification.mobileVerified}
+                      onChange={() => handleVerificationChange("mobileVerified")}
+                    />
+                    <span className="toggle-slider"></span>
+                  </label>
+                </div>
+
+                <div className="toggle-group">
+                  <span className="toggle-label">Lead Verified</span>
+                  <label className="toggle-switch">
+                    <input
+                      type="checkbox"
+                      checked={Verification.leadVerified}
+                      onChange={() => handleVerificationChange("leadVerified")}
+                    />
+                    <span className="toggle-slider"></span>
+                  </label>
+                </div>
+
+                <div className="toggle-group">
+                  <span className="toggle-label">Email Valid</span>
+                  <label className="toggle-switch">
+                    <input
+                      type="checkbox"
+                      checked={Verification.emailValid}
+                      onChange={() => handleVerificationChange("emailValid")}
+                    />
+                    <span className="toggle-slider"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </>
         )}
-
 
         {/* Footer */}
         <div className="modal-footer">

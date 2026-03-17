@@ -463,7 +463,7 @@
 }
 
 .admin-leads-page .lead-email{
-  color: #6b7280;
+  color: #14181F;
   font-size: 13px;
 }
 
@@ -791,9 +791,9 @@
 }
 
 .admin-leads-page .modal-header h2{
-  font-size: 24px;
-  font-weight: 600;
-  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+  color: #000000;
   margin: 0;
 }
 
@@ -828,9 +828,9 @@
 .admin-leads-page .form-group label{
   display: block;
   margin-bottom: 8px;
-  font-weight: 500;
-  color: #555;
-  font-size: 14px;
+  font-weight: 300;
+  color: #000000;
+  font-size: 16px;
 }
 
 /* Leads Page Form Inputs Only */
@@ -839,7 +839,7 @@
   width: 100%;
   height: 44px;
   border-radius: 10px;
-  border: 1px solid #d0d5dd;
+  border: 1px solid #AEAEAE;
   padding: 0 14px;
   font-size: 14px;
   font-family: "Roboto", sans-serif;
@@ -1001,9 +1001,9 @@
 }
 
 .admin-leads-page .toggle-label{
-  font-size: 18px;
-  color: #111827;
-  font-weight: 500;
+  font-size: 16px;
+  color: #020202;
+  font-weight: 400;
 }
 
 .admin-leads-page .toggle-switch{

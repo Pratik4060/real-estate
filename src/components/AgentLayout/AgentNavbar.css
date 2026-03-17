@@ -376,7 +376,7 @@
   .agent-navbar .mobile-menu-toggle{
     display: flex;
     margin-right: 12px;
-    margin-left: 0;
+    margin-left: 15px;
   }
 
   /* Adjust right section */
