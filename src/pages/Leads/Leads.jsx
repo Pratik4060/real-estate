@@ -481,6 +481,7 @@ const Leads = () => {
             <p>Loading leads data...</p>
           </div>
         </div>
+        
       </div>
     );
   }
@@ -944,6 +945,18 @@ const Leads = () => {
             />
           </div>
 
+          {modalMode === "add" ? (
+            <div className="form-group">
+              <label>Budget</label>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
+                placeholder="Enter Email ID"
+              />
+            </div>
+          ) : (
           <div className="form-group">
             <label>Follow-up Date</label>
             <input
@@ -953,6 +966,8 @@ const Leads = () => {
               onChange={handleInputChange}
             />
           </div>
+          )}
+        
         </div>
 
         {/* Row 4 */}

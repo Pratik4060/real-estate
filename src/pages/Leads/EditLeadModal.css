@@ -1,0 +1,62 @@
+.edit-modal {
+  width: 780px;
+  border-radius: 20px;
+  padding: 30px 35px;
+  background: white;
+}
+
+/* spacing */
+.edit-form-row {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.edit-form-group {
+  flex: 1;
+}
+
+.edit-form-group input,
+.edit-form-group select {
+  height: 48px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  padding: 0 14px;
+  font-size: 14px;
+}
+
+/* header */
+.edit-modal-header h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* toggle alignment */
+.edit-toggle-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* buttons center aligned */
+.edit-modal-footer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+/* button styles */
+.edit-btn-submit {
+  background: #1d4ed8;
+  padding: 10px 30px;
+  border-radius: 8px;
+  color: white;
+}
+
+.edit-btn-cancel {
+  border: 1px solid #1d4ed8;
+  color: #1d4ed8;
+  padding: 10px 30px;
+  border-radius: 8px;
+}

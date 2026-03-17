@@ -358,7 +358,7 @@ const Dashboard = () => {
       
       // Round up to nearest 5 for cleaner y-axis
       const roundedMax = Math.ceil(calculatedMax / 5) * 5;
-      setMaxValue(roundedMax);
+      setMaxValue(100);
     } else {
       // If no agents have leads, show first 5 agents with zeros
       const firstFiveAgents = agents.slice(0, 5).map(agent => ({
@@ -372,14 +372,7 @@ const Dashboard = () => {
   };
 
   // Y-axis labels - dynamically calculated based on maxValue
-  const yAxisLabels = [
-    maxValue.toString(),
-    Math.round(maxValue * 0.75).toString(),
-    Math.round(maxValue * 0.5).toString(),
-    Math.round(maxValue * 0.25).toString(),
-    "0"
-  ];
-  
+const yAxisLabels = ["100", "75", "50", "25", "0"];  
   // Grid line positions - major lines at 0,25%,50%,75%,100% and middle lines
   const gridLinePositions = [100, 87.5, 75, 62.5, 50, 37.5, 25, 12.5, 0];
 
@@ -489,7 +482,22 @@ const Dashboard = () => {
               <p className="stat-label">{stat.title}</p>
               <h2 className="stat-value">{stat.value}</h2>
               <p className={`stat-trend ${stat.trend.startsWith('+') ? 'positive' : stat.trend.startsWith('-') ? 'negative' : ''}`}>
-                {stat.trend}
+
+                {stat.trend.startsWith('+') && (
+                  <img 
+                  src={getAssetPath("Arrow 2.svg")}
+                  />
+    
+                )}
+                  {stat.trend.startsWith('-') && (
+    <img
+      src={getAssetPath("down-arrow.svg")}
+      alt="down"
+      className="trend-icon"
+    />
+  )}
+  <span className="trend-value">{stat.trend}</span>
+
               </p>
             </div>
             <div className={`stat-icon ${stat.iconBg}`}>

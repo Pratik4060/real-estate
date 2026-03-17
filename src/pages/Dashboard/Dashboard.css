@@ -619,6 +619,21 @@
 }
 
 @media (max-width: 480px) {
+
+  .performance-wrapper {
+    flex-direction: column;
+    gap: 10px;
+  }
+    .y-axis {
+    flex-direction: row;
+    justify-content: space-between;
+    border-right: none;
+    border-bottom: 1px solid #eaecf0;
+    padding-bottom: 5px;
+  }
+
+  
+
   .agent-performance-header {
     flex-wrap: wrap;
     gap: 12px;
