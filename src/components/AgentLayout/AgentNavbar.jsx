@@ -119,12 +119,17 @@ const AgentNavbar = ({ toggleSidebar, sidebarOpen }) => {
         </div>
 
         <div className="right-section">
-          <div
-            className="notification-icon"
-            ref={notificationRef}
-            onClick={() => setShowNotifications(!showNotifications)}
-          >
-            <img
+<div
+  className="notification-icon"
+  ref={notificationRef}
+  onClick={() => {
+    setShowNotifications(!showNotifications);
+
+    // 🔥 Close other dropdowns
+    const event = new CustomEvent("closeAllDropdowns");
+    window.dispatchEvent(event);
+  }}
+>            <img
               src={"/assets/notification.svg"}
               alt="Notifications"
               className="bell-icon"

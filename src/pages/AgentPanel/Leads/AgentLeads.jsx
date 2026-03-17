@@ -175,36 +175,53 @@ const AgentLeads = () => {
     }
   };
 
-  const handleDeleteSelected = () => {
-    if (selectedRows.length === 0) return;
-    
-    const updated = leadsData.filter(
-      (lead) => !selectedRows.includes(lead.id)
-    );
-    setLeadsData(updated);
-    setSelectedRows([]);
-    setSelectAll(false);
-    
-    // Adjust current page if necessary
-    const newTotalPages = Math.ceil(updated.length / itemsPerPage);
-    if (currentPage > newTotalPages && newTotalPages > 0) {
-      setCurrentPage(newTotalPages);
-    }
-  };
+const handleDeleteSelected = () => {
+  if (selectedRows.length === 0) return;
+
+  const updated = leadsData.filter(
+    (lead) => !selectedRows.includes(lead.id)
+  );
+  setLeadsData(updated);
+
+  // 🔥 Admin storage
+  const storedAdmin = JSON.parse(localStorage.getItem("leadsData")) || [];
+  const updatedAdmin = storedAdmin.filter(
+    (lead) => !selectedRows.includes(lead.id)
+  );
+  localStorage.setItem("leadsData", JSON.stringify(updatedAdmin));
+
+  // 🔥 Agent storage
+  const storedAgent = JSON.parse(localStorage.getItem("agentLeadsData")) || [];
+  const updatedAgent = storedAgent.filter(
+    (lead) => !selectedRows.includes(lead.id)
+  );
+  localStorage.setItem("agentLeadsData", JSON.stringify(updatedAgent));
+
+  setSelectedRows([]);
+  setSelectAll(false);
+
+  window.dispatchEvent(new Event("localStorageUpdated"));
+};
 
   /* DELETE SINGLE - Only from agent view, not from admin */
-  const handleDeleteRow = (id) => {
-    // This only removes from agent view, not from admin data
-    const updated = leadsData.filter((lead) => lead.id !== id);
-    setLeadsData(updated);
-    
-    // Adjust current page if necessary
-    const newTotalPages = Math.ceil(updated.length / itemsPerPage);
-    if (currentPage > newTotalPages && newTotalPages > 0) {
-      setCurrentPage(newTotalPages);
-    }
-  };
+const handleDeleteRow = (id) => {
+  // Update state
+  const updated = leadsData.filter((lead) => lead.id !== id);
+  setLeadsData(updated);
 
+  // 🔥 Update admin storage
+  const storedAdmin = JSON.parse(localStorage.getItem("leadsData")) || [];
+  const updatedAdmin = storedAdmin.filter((lead) => lead.id !== id);
+  localStorage.setItem("leadsData", JSON.stringify(updatedAdmin));
+
+  // 🔥 Update agent storage
+  const storedAgent = JSON.parse(localStorage.getItem("agentLeadsData")) || [];
+  const updatedAgent = storedAgent.filter((lead) => lead.id !== id);
+  localStorage.setItem("agentLeadsData", JSON.stringify(updatedAgent));
+
+  // 🔥 Notify other components
+  window.dispatchEvent(new Event("localStorageUpdated"));
+};
   /* HANDLE SORT */
   const handleSort = (key) => {
     let direction = 'asc';

@@ -51,6 +51,16 @@ const AgentDashboard = () => {
     "Custom",
   ];
 
+  useEffect(() =>{
+    const handleClose = () =>{
+      setShowDateDropdown(false)
+    }
+    window.addEventListener("closeAllDropdowns", handleClose);
+    return () => {
+      window.removeEventListener("closeAllDropdowns", handleClose);
+    }
+    },[]);
+
   // Load data from localStorage on component mount
   useEffect(() => {
     loadDashboardData();
@@ -333,8 +343,15 @@ const AgentDashboard = () => {
           <div className="agent-date-picker-wrapper">
             <button
               className="agent-date-dropdown-btn"
-              onClick={() => setShowDateDropdown(!showDateDropdown)}
-            >
+onClick={() => {
+  if (!showDateDropdown) {
+    window.dispatchEvent(new CustomEvent("closeAllDropdowns"));
+    setShowDateDropdown(true);
+  } else {
+    setShowDateDropdown(false);
+  }
+}}              >
+            
               <img src="/assets/calendar.svg" alt="Calendar" className="agent-calendar-icon" />
               {selectedDate}
               <img

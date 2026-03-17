@@ -130,6 +130,7 @@
   top: calc(100% + 8px);
   right: 0;
   width: 360px;
+  max-width: 90vw;
   max-height: 500px;
   background: #ffffff;
   border: 1px solid #eaecf0;
@@ -357,6 +358,16 @@
 
 /* MOBILE STYLES */
 @media (max-width: 768px) {
+  
+  .agent-navbar .notifications-dropdown {
+    right: 10px;        /* little padding from edge */
+    left: auto;
+    width: 90vw;        /* full responsive */
+    max-width: none;
+    top: calc(100% + 10px);
+  }
+
+
   .agent-navbar.navbar{
     position: fixed;
     top: 0;
