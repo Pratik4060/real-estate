@@ -351,13 +351,8 @@ const Dashboard = () => {
 
       setAgentData(topAgents);
       
-      // Calculate max value for chart scaling
-      const maxLeads = Math.max(...topAgents.map(agent => agent.leads), 1);
-      const maxConverted = Math.max(...topAgents.map(agent => agent.converted), 1);
-      const calculatedMax = Math.max(maxLeads, maxConverted, 5);
-      
-      // Round up to nearest 5 for cleaner y-axis
-      const roundedMax = Math.ceil(calculatedMax / 5) * 5;
+
+    
       setMaxValue(100);
     } else {
       // If no agents have leads, show first 5 agents with zeros
@@ -485,9 +480,10 @@ const yAxisLabels = ["100", "75", "50", "25", "0"];
 
                 {stat.trend.startsWith('+') && (
                   <img 
-                  src={getAssetPath("Arrow 2.svg")}
+                  src={getAssetPath("Arrow 2.svg") } 
+                  alt="up"
                   />
-    
+
                 )}
                   {stat.trend.startsWith('-') && (
     <img
@@ -574,8 +570,6 @@ const yAxisLabels = ["100", "75", "50", "25", "0"];
             {/* Agent Labels - Below the chart */}
             <div className="agent-labels-container">
               {agentData.map((agent, index) => {
-                // Truncate long names for display
-                const displayName = agent.name
                 return (
                   <span key={index} className="agent-label" >
                     {agent.name}

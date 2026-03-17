@@ -318,7 +318,7 @@
 }
 
 /* Bars Container */
-.bars-container {
+.agent-bars-container {
   position: relative;
   height: 100%;
   display: flex;
