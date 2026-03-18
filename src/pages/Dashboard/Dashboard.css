@@ -603,56 +603,205 @@
 }
 
 @media (max-width: 480px) {
-
-  .performance-wrapper {
-    flex-direction: column;
-    gap: 10px;
+  .dashboard {
+    padding: 12px;
   }
-    .y-axis {
-    flex-direction: row;
-    justify-content: space-between;
-    border-right: none;
-    border-bottom: 1px solid #eaecf0;
-    padding-bottom: 5px;
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 30px;
+  }
+
+  .stat-card {
+    height: 100px;
+    padding: 12px;
+  }
+
+  .stat-value {
+    font-size: 16px;
+  }
+
+  .stat-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .stat-icon-img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .agent-performance {
+    padding: 12px;
+    min-height: 350px;
+    overflow: visible;
   }
 
   .agent-performance-header {
-    flex-wrap: wrap;
-    gap: 12px;
+    margin-bottom: 15px;
   }
 
-  .bar {
-    width: 15px;
+  .section-title {
+    font-size: 16px;
   }
 
-  .bars-container {
-    overflow-x: auto;
-    justify-content: flex-start;
-  }
-
-  .agent-bar-group {
-    width: 50px;
-    flex-shrink: 0;
-  }
-
-  .agent-label {
-    width: 50px;
-    font-size: 8px;
-    white-space: nowrap;
-  }
-
-  .agent-labels-container {
-    justify-content: flex-start;
-    overflow-x: auto;
-  }
-
-  .legend {
-    flex-direction: column;
+  /* Fix performance wrapper - REMOVE flex-direction: column */
+  .performance-wrapper {
+    display: flex;
+    flex-direction: row; /* Keep it row, not column */
     gap: 8px;
+    height: 240px;
+    margin-bottom: 25px;
+  }
+
+  /* Fix y-axis - REMOVE flex-direction: row and border-bottom */
+  .y-axis {
+    display: flex;
+    flex-direction: column; /* Keep it column, not row */
+    justify-content: space-between;
+    padding-right: 8px;
+    border-right: 1px solid #eaecf0; /* Keep border-right, remove border-bottom */
+    border-bottom: none;
+    min-width: 30px;
+    margin-bottom: 25px;
+  }
+
+  .y-axis-label {
+    font-size: 9px;
+  }
+
+  .chart-area {
+    min-width: auto; /* Remove min-width */
+    width: 100%;
+  }
+
+  .grid-lines {
+    bottom: 25px;
+  }
+
+  /* Fix bars container - REMOVE overflow-x and justify-content */
+  .bars-container {
+    display: flex;
+    justify-content: space-evenly; /* Keep even spacing */
+    align-items: flex-end;
+    gap: 4px;
+    width: 100%;
+    overflow-x: visible; /* Remove scroll */
+    padding: 0;
+  }
+
+  /* Fix agent bar group - REMOVE width and flex-shrink */
+  .agent-bar-group {
+    flex: 1; /* Use flex:1 instead of fixed width */
+    min-width: auto; /* Remove min-width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
   }
 
   .bars-wrapper {
-    gap: 3px;
+    height: 160px;
+    gap: 4px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .bar {
+    width: 14px; /* Slightly smaller */
+  }
+
+  /* Fix agent labels - REMOVE overflow-x */
+  .agent-labels-container {
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 2px;
+    gap: 4px;
+    overflow-x: visible; /* Remove scroll */
+  }
+
+  .agent-label {
+    font-size: 8px;
+    color: #344054;
+    text-align: center;
+    font-weight: 500;
+    white-space: nowrap;
+    width: auto; /* Remove fixed width */
+    max-width: 60px; /* Add max-width instead */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Fix legend */
+  .legend {
+    display: flex;
+    flex-direction: row; /* Keep row, not column */
+    gap: 12px;
+    margin-top: 15px;
+    padding-top: 12px;
+    flex-wrap: wrap;
+  }
+
+  .legend-item {
+    gap: 6px;
+  }
+
+  .legend-dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .legend-text {
+    font-size: 11px;
+  }
+
+  .download-icon-btn {
+    width: 28px;
+    height: 28px;
+  }
+
+  .download-icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* Add this for very small screens */
+@media (max-width: 360px) {
+  .agent-performance {
+    min-height: 320px;
+    padding: 10px;
+  }
+
+  .performance-wrapper {
+    height: 210px;
+  }
+
+  .bars-wrapper {
+    height: 140px;
+  }
+
+  .bar {
+    width: 12px;
+  }
+
+  .agent-label {
+    font-size: 7px;
+    max-width: 50px;
+  }
+
+  .y-axis-label {
+    font-size: 8px;
+  }
+
+  .legend-text {
+    font-size: 10px;
   }
 }
 
@@ -667,4 +816,6 @@
     grid-template-columns: 1fr;
   }
 }
+
+
 

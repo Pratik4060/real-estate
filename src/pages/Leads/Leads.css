@@ -207,7 +207,7 @@
   font-weight: 500;
 }
 
-/* Delete Button */
+
 .admin-leads-page .delete-btn{
   display: flex;
   align-items: center;
@@ -260,7 +260,6 @@
   z-index: 999;
 }
 
-/* Table Container */
 .admin-leads-page .table-container{
   width: 100%;
   overflow-x: auto;
@@ -269,7 +268,6 @@
   border-radius: 8px;
 }
 
-/* Custom Scrollbar */
 .admin-leads-page .table-container::-webkit-scrollbar{
   width: 8px;
   height: 8px;
@@ -431,7 +429,6 @@
   border-bottom: 1px solid #eaecf0;
 }
 
-/* Table Header Content */
 .admin-leads-page .th-content{
   display: flex;
   align-items: center;
@@ -497,7 +494,7 @@
 
 
 .admin-leads-page .budget-cell{
-  font-weight: 500;
+  font-weight: 400;
   color: #059669;
 }
 
