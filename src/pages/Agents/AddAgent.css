@@ -104,3 +104,12 @@
   border-radius: 6px;
   cursor: pointer;
 }
+.aa-error {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.aa-error-input {
+  border: 1px solid red !important;
+}
