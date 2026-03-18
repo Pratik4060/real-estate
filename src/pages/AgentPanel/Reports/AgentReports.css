@@ -256,7 +256,7 @@
 }
 
 /* Y-Axis */
-.y-axis {
+.agent-y-axis {
   display: flex;
   flex-direction: column;
   justify-content: space-between;

@@ -353,7 +353,10 @@ const Dashboard = () => {
       
 
     
-      setMaxValue(100);
+      const maxLeads = Math.max(...topAgents.map(a => a.leads));
+const maxConverted = Math.max(...topAgents.map(a => a.converted));
+
+setMaxValue(Math.max(maxLeads, maxConverted, 10));
     } else {
       // If no agents have leads, show first 5 agents with zeros
       const firstFiveAgents = agents.slice(0, 5).map(agent => ({
