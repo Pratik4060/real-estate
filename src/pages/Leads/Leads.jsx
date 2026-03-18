@@ -37,6 +37,8 @@ const Leads = () => {
     requirement: "Buy",
     budget: "",
     location: "",
+     propertytype: "",
+
     agent: "",
     followUp: "",
     status: "New",
@@ -72,6 +74,10 @@ const Leads = () => {
 
   if (!formData.budget) {
     newErrors.budget = "Budget is required";
+  }
+
+  if(!formData.propertytype){
+    newErrors.propertytype = "Property type is required";
   }
 
   if (!formData.followUp) {
@@ -259,6 +265,7 @@ const Leads = () => {
       lead.email.toLowerCase().includes(searchQuery.toLowerCase()) ||
       lead.phone.includes(searchQuery) ||
       lead.location.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      lead.propertytype.toLowerCase().includes(searchQuery.toLowerCase()) ||
       lead.agent.toLowerCase().includes(searchQuery.toLowerCase());
 
     const matchesStatus =
@@ -371,6 +378,7 @@ const Leads = () => {
       phone: "",
       requirement: "Buy",
       budget: "",
+      propertytype: "",
       location: "",
       agent: "",
       followUp: "",
@@ -383,6 +391,7 @@ const Leads = () => {
       leadVerified: false,
       emailValid: false
     });
+    setErrors({});
     setShowModal(true);
   };
 
@@ -395,6 +404,7 @@ const Leads = () => {
       phone: lead.phone,
       requirement: lead.requirement,
       budget: lead.budget,
+      propertytype: lead.propertytype,
       location: lead.location,
       agent: lead.agent,
       followUp: lead.followUp,
@@ -409,7 +419,9 @@ const Leads = () => {
         emailValid: false
       }
     );
+    setErrors({});
     setShowModal(true);
+    setErrors({});
   };
 
   const handleDeleteClick = (lead) => {
@@ -749,6 +761,26 @@ const handleSubmit = (e) => {
                       </div>
                     </div>
                   </th>
+
+                  <th className="lead-name-col" onClick={() => handleSort('name')}>
+                    <div className="th-content">
+                      <span>Property Type</span>
+                      <div className="sort-icons">
+
+                      
+                        <img 
+                          src={getAssetPath("ChevronLeft.svg")}
+                          alt="Sort" 
+                          className={`sort-icon ${sortConfig.key === 'propertyType' && sortConfig.direction === 'asc' ? 'active' : ''}`}
+                        />
+                        <img 
+                          src={getAssetPath("ChevronRight.svg")} 
+                          alt="Sort" 
+                          className={`sort-icon ${sortConfig.key === 'propertyType' && sortConfig.direction === 'desc' ? 'active' : ''}`}
+                        />
+                      </div>
+                    </div>
+                  </th>
                   <th className="agent-col" onClick={() => handleSort('agent')}>
                     <div className="th-content">
                       <span>Agent</span>
@@ -825,6 +857,7 @@ const handleSubmit = (e) => {
                           </div>
                             </td>
                         <td className="location-col">{lead.location}</td>
+                          <td className="propertytype-col">{lead.propertytype}</td>
                         <td className="agent-col">{lead.agent}</td>
                         <td className="followup-col">{lead.followUp}</td>
                         <td className="status-col">
@@ -1027,6 +1060,25 @@ const handleSubmit = (e) => {
               </div>
 
               <div className="form-group">
+                <label>Property Type</label>
+                <input
+                  type="text"
+                  name="Property Type"
+                  value={formData.propertytype}
+                  onChange={handleInputChange}
+                  placeholder="eg 75L or 35k"
+                    className={errors.propertytype ? "input-error" : ""}
+                />
+                {errors.propertytype && <span className="error-text">{errors.propertytype}</span>}
+              </div>
+
+
+            </div>
+
+            {/* Row 5: Lead Status | (empty) */}
+            <div className="form-row">
+
+                            <div className="form-group">
                 <label>Follow-up Date</label>
                 <input
                   type="date"
@@ -1038,10 +1090,7 @@ const handleSubmit = (e) => {
                 />
                 {errors.followUp && <span className="error-text">{errors.followUp}</span>}
               </div>
-            </div>
 
-            {/* Row 5: Lead Status | (empty) */}
-            <div className="form-row">
               <div className="form-group">
                 <label>Lead Status</label>
                 <select
@@ -1055,9 +1104,6 @@ const handleSubmit = (e) => {
                       <option key={option}>{option}</option>
                     ))}
                 </select>
-              </div>
-              <div className="form-group">
-                {/* Empty div for layout alignment */}
               </div>
             </div>
           </>
@@ -1166,7 +1212,23 @@ const handleSubmit = (e) => {
                 </select>
               </div>
 
+
               <div className="form-group">
+                <label>Property Type</label>
+                <input
+                  type="text"
+                  name="propertytype"
+                  value={formData.propertytype}
+                  onChange={handleInputChange}
+                  placeholder="eg 75L or 35k"
+                    className={errors.propertytype ? "input-error" : ""}
+                />
+                {errors.propertytype && <span className="error-text">{errors.propertytype}</span>}
+              </div>
+            </div>
+
+            <div className="form-row">
+                            <div className="form-group">
                 <label>Lead Status</label>
                 <select
                   name="status"
@@ -1180,6 +1242,8 @@ const handleSubmit = (e) => {
                     ))}
                 </select>
               </div>
+              <div className="form-group"></div>
+
             </div>
 
             {/* Contact Verification Section (Edit Only) */}
