@@ -37,6 +37,25 @@ const Agents = () => {
   const [agentsData, setAgentsData] = useState([]);
   const [leadsData, setLeadsData] = useState([]);
 
+  const getViewDetails = () => {
+    const locationValue = (formData.location || "").trim();
+    const locationParts = locationValue
+      .split(",")
+      .map((part) => part.trim())
+      .filter(Boolean);
+    const emailPrefix = formData.email ? formData.email.split("@")[0] : "";
+    const city = locationParts.length > 1 ? locationParts[1] : locationParts[0];
+    const state = locationParts.length > 2 ? locationParts[2] : "";
+
+    return {
+      username: emailPrefix || formData.name.toLowerCase().replace(/\s+/g, "."),
+      password: currentAgent?.password || "Not Available",
+      address: locationValue || "Not Available",
+      city: city || "Not Available",
+      state: state || "Not Available",
+    };
+  };
+
   // Load agents and leads from localStorage on component mount
   useEffect(() => {
     loadData();
@@ -590,6 +609,8 @@ const Agents = () => {
     );
   }
 
+  const viewDetails = getViewDetails();
+
   return (
     <div className="agents-container admin-agents-page">
       <div className="agents-content">
@@ -983,14 +1004,17 @@ const Agents = () => {
       {/* Add/Edit/View Modal */}
       {showModal && (
         <div className="modal-overlay" onClick={() => setShowModal(false)}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+          <div
+            className={`modal-content ${modalMode === "view" ? "view-modal-content" : ""}`}
+            onClick={(e) => e.stopPropagation()}
+          >
             <div className="modal-header">
               <h2>
                 {modalMode === "add"
                   ? "Add New Agent"
                   : modalMode === "edit"
                     ? "Edit Details"
-                    : "View Agent"}
+                    : "View Details"}
               </h2>
               <button
                 className="modal-close"
@@ -1145,6 +1169,69 @@ const Agents = () => {
                       </div>
                     </div>
                   </>
+                ) : modalMode === "view" ? (
+                  <div className="view-details-layout">
+                    <div className="view-section">
+                      <h3>Contact Details</h3>
+                      <div className="view-row">
+                        <div className="view-group">
+                          <label>Name</label>
+                          <input className="view-input" type="text" value={formData.name} disabled />
+                        </div>
+                        <div className="view-group">
+                          <label>Phone</label>
+                          <input className="view-input" type="text" value={formData.phone} disabled />
+                        </div>
+                        <div className="view-group">
+                          <label>Email</label>
+                          <input className="view-input" type="text" value={formData.email} disabled />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="view-section">
+                      <h3>User ID & Password</h3>
+                      <div className="view-row">
+                        <div className="view-group">
+                          <label>User Name</label>
+                          <input className="view-input" type="text" value={viewDetails.username} disabled />
+                        </div>
+                        <div className="view-group">
+                          <label>Password</label>
+                          <input className="view-input" type="text" value={viewDetails.password} disabled />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="view-section">
+                      <h3>Professional Details</h3>
+                      <div className="view-row">
+                        <div className="view-group">
+                          <label>Experience</label>
+                          <input className="view-input" type="text" value={formData.experience || 0} disabled />
+                        </div>
+                        <div className="view-group">
+                          <label>Specialization</label>
+                          <input className="view-input" type="text" value={formData.specialization} disabled />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="view-section">
+                      <h3>Address Information</h3>
+                      <div className="view-row">
+                        <div className="view-group">
+                          <label>Address</label>
+                          <input className="view-input" type="text" value={viewDetails.address} disabled />
+                        </div>
+                        <div className="view-group">
+                          <label>City</label>
+                          <input className="view-input" type="text" value={viewDetails.city} disabled />
+                        </div>
+                        <div className="view-group">
+                          <label>State</label>
+                          <input className="view-input" type="text" value={viewDetails.state} disabled />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 ) : (
                   <>
                     <div className="form-row">
@@ -1292,59 +1379,24 @@ const Agents = () => {
                       </>
                     )}
 
-                    {modalMode === "view" && (
-                      <div className="agent-stats-view">
-                        <div className="stat-row">
-                          <span className="stat-label">Total Leads:</span>
-                          <span className="stat-value">
-                            {currentAgent?.totalLeads || 0}
-                          </span>
-                        </div>
-                        <div className="stat-row">
-                          <span className="stat-label">Total Deals:</span>
-                          <span className="stat-value">
-                            {currentAgent?.totalDeals || 0}
-                          </span>
-                        </div>
-                        <div className="stat-row">
-                          <span className="stat-label">Conversion Rate:</span>
-                          <span className="stat-value">
-                            {currentAgent?.totalLeads
-                              ? Math.round(
-                                  (currentAgent.totalDeals /
-                                    currentAgent.totalLeads) *
-                                    100,
-                                )
-                              : 0}
-                            %
-                          </span>
-                        </div>
-                        <div className="stat-row">
-                          <span className="stat-label">Experience:</span>
-                          <span className="stat-value">
-                            {currentAgent?.experience || 0} years
-                          </span>
-                        </div>
-                      </div>
-                    )}
                   </>
                 )}
               </div>
 
-              <div className="modal-footer">
-                <button
-                  type="button"
-                  className="cancel-btn"
-                  onClick={() => setShowModal(false)}
-                >
-                  Cancel
-                </button>
-                {modalMode !== "view" && (
+              {modalMode !== "view" && (
+                <div className="modal-footer">
+                  <button
+                    type="button"
+                    className="cancel-btn"
+                    onClick={() => setShowModal(false)}
+                  >
+                    Cancel
+                  </button>
                   <button type="submit" className="submit-btn">
                     {modalMode === "add" ? "Add Agent" : "Edit Agent"}
                   </button>
-                )}
-              </div>
+                </div>
+              )}
             </form>
           </div>
         </div>

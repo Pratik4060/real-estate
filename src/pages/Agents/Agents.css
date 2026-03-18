@@ -671,16 +671,33 @@
 }
 
 .admin-agents-page .modal-content{
-  width: 781px;
+  width: 800px;
+  max-width: 90%;
   height: auto;
   max-height: 90vh;
+  margin: auto;
   overflow-y: auto;
   background: white;
   border-radius: 20px;
   border-width: 1px;
-  padding: 35px 40px;
+  padding: 30px 35px;
   position: relative;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  scrollbar-width: none;
+}
+
+.admin-agents-page .view-modal-content{
+  width: min(1070px, calc(100vw - 32px));
+  max-width: min(1070px, calc(100vw - 32px));
+  max-height: min(92vh, 801px);
+  padding: 28px 48px 40px;
+  border-radius: 14px;
+}
+
+.admin-agents-page .view-section {
+  width: 965px;
+  height: 119px;
+  gap:21px
 }
 
 .admin-agents-page .delete-confirm-modal{
@@ -711,7 +728,7 @@
 .admin-agents-page .modal-header h2{
   font-size: 18px;
   font-weight: 500;
-  color: #333;
+  color: #14181F;
   margin: 0;
 }
 
@@ -733,6 +750,68 @@
   margin-bottom: 30px;
 }
 
+.admin-agents-page .view-details-layout{
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.admin-agents-page .view-section h3{
+  margin: 0 0 18px;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #14181F;
+  letter-spacing: 0.2px;
+}
+/* New view modal layout styles */
+.admin-agents-page .view-row {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 12px;
+}
+.admin-agents-page .view-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+}
+.admin-agents-page .view-group label {
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #262626;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+}
+.admin-agents-page .view-input {
+  width: 100%;
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  background: #f7f8fa;
+  font-size: 15px;
+  color: #333;
+  padding: 0 14px;
+  font-family: "Roboto", sans-serif;
+  outline: none;
+  margin-bottom: 0;
+  pointer-events: none;
+}
+
+.admin-agents-page .form-row.two{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.admin-agents-page .form-row.three{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .admin-agents-page .form-row{
   display: flex;
   gap: 20px;
@@ -747,7 +826,7 @@
   display: block;
   margin-bottom: 8px;
   font-weight: 300;
-  color: #555;
+  color: #262626;
   font-size: 14px;
 }
 
@@ -777,6 +856,35 @@
 .admin-agents-page.agents-container .form-group select:disabled{
   background-color: #f5f5f5;
   cursor: not-allowed;
+}
+
+.admin-agents-page .view-details-layout .form-row{
+  gap: 16px;
+  margin-bottom: 0;
+}
+
+.admin-agents-page .view-details-layout .form-group label{
+  margin-bottom: 8px;
+  font-size: 15px;
+  font-weight: 400;
+  color: #2B2B2B;
+}
+
+.admin-agents-page.agents-container .view-details-layout .form-group input{
+  height: 44px;
+  border: 1px solid #d2d6db;
+  border-radius: 9px;
+  background: #f3f4f6;
+  color: #202939;
+  font-size: 15px;
+  padding: 0 18px;
+  box-shadow: inset 0 1px 1px rgba(16, 24, 40, 0.02);
+}
+
+.admin-agents-page.agents-container .view-details-layout .form-group input:disabled{
+  background: #f3f4f6;
+  color: #202939;
+  opacity: 1;
 }
 
 .admin-agents-page .password-hint{
@@ -1029,14 +1137,16 @@
     height: 32px;
   }
 
-  .admin-agents-page .modal-content{
-    width: 95%;
-    padding: 20px;
-  }
+  
   
   .admin-agents-page .form-row{
     flex-direction: column;
     gap: 15px;
+  }
+
+  .admin-agents-page .form-row.two,
+  .admin-agents-page .form-row.three{
+    grid-template-columns: 1fr;
   }
   
   .admin-agents-page .modal-footer{
@@ -1052,6 +1162,12 @@
 
 
 @media (max-width: 768px){
+
+.admin-agents-page .view-modal-content{
+  width: calc(100vw - 24px);
+  max-width: calc(100vw - 24px);
+  padding: 24px 18px 28px;
+}
 
 .admin-agents-page .search-container{
   width: 100%;
