@@ -28,16 +28,10 @@
   font-family: "Roboto", sans-serif;
 }
 
-/* Common Filter Section */
-.admin-reports-page .common-filter-section{
+.admin-reports-page .card-header-right{
   display: flex;
-  justify-content: flex-end;
   align-items: center;
-  margin-bottom: 24px;
-  width: 100%;
-  max-width: 1126px;
-  margin-left: auto;
-  margin-right: auto;
+  gap: 12px;
 }
 
 /* Rent vs Buy Card */

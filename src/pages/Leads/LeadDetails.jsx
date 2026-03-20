@@ -142,7 +142,7 @@ const LeadDetails = () => {
             </div>
               <div className="detail-item">
               <span className="detail-label">Property Type</span>
-              <div className="detail-value-box">{lead.propertyType}</div>
+              <div className="detail-value-box">{lead.propertytype}</div>
             </div>
             <div className="detail-item">
               <span className="detail-label">Assigned Agent Name</span>

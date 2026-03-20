@@ -28,6 +28,8 @@ const Agents = () => {
     email: "",
     phone: "",
     location: "",
+    city: "",
+    state: "",
     specialization: "Residential Sales",
     experience: "",
     password: "",
@@ -44,9 +46,9 @@ const Agents = () => {
       .map((part) => part.trim())
       .filter(Boolean);
     const emailPrefix = formData.email ? formData.email.split("@")[0] : "";
-    const city = locationParts.length > 1 ? locationParts[1] : locationParts[0];
-    const state = locationParts.length > 2 ? locationParts[2] : "";
-
+    const city = formData.city ? formData.city.trim() : "";
+    const state = formData.state ? formData.state.trim() : "";
+    
     return {
       username: emailPrefix || formData.name.toLowerCase().replace(/\s+/g, "."),
       password: currentAgent?.password || "Not Available",
@@ -412,6 +414,8 @@ const Agents = () => {
       email: "",
       phone: "",
       location: "",
+      city: "",
+      state: "",
       specialization: "Residential Sales",
       experience: "",
       password: "",
@@ -428,6 +432,8 @@ const Agents = () => {
       email: agent.email,
       phone: agent.phone,
       location: agent.location,
+        city: agent.city ,
+      state: agent.state ,
       specialization: agent.specialization,
       experience: agent.experience,
       password: "",
@@ -444,6 +450,8 @@ const Agents = () => {
       email: agent.email,
       phone: agent.phone,
       location: agent.location,
+        city: agent.city ,
+      state: agent.state ,
       specialization: agent.specialization,
       experience: agent.experience,
       password: "",
@@ -528,6 +536,8 @@ const Agents = () => {
               email: formData.email,
               phone: formData.phone,
               location: formData.location,
+                city: formData.city ,
+              state: formData.state ,
               specialization: formData.specialization,
               experience: parseInt(formData.experience) || agent.experience,
               ...(formData.password ? { password: formData.password } : {}),
@@ -1159,12 +1169,12 @@ const Agents = () => {
 
                         <div className="form-group">
                           <label>City</label>
-                          <input type="text" placeholder="City" />
+                          <input type="text" placeholder="City" name="city" value={formData.city} onChange={handleInputChange} />
                         </div>
 
                         <div className="form-group">
                           <label>State</label>
-                          <input type="text" placeholder="State" />
+                          <input type="text" placeholder="State" name="state" value={formData.state} onChange={handleInputChange}/>
                         </div>
                       </div>
                     </div>

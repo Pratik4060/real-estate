@@ -274,7 +274,7 @@
   width: 150px;
   padding: 8px;
   justify-content: center;
-  /* border-bottom: 1px solid #eaecf0; */
+  text-align: center;
 }
 
 /* Table Header Content */

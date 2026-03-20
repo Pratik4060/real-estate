@@ -107,6 +107,8 @@ const AddAgent = () => {
       email: formData.email,
       phone: formData.phone,
       location: formData.address,
+      city: formData.city,
+      state: formData.state,
       specialization: formData.specialization,
       experience: parseInt(formData.experience),
     };

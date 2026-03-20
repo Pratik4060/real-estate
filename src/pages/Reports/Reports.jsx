@@ -10,7 +10,7 @@ const downloadIcon = getAssetPath("download.svg");
 const Reports = () => {
   // Common filter state for all cards
   const [selectedDate, setSelectedDate] = useState("Last 6 Months");
-  const [showDateDropdown, setShowDateDropdown] = useState(false);
+  const [showDateDropdown, setShowDateDropdown] = useState(null);
   const [loading, setLoading] = useState(true);
 
   // State for tooltips
@@ -375,7 +375,7 @@ const safeRentAngle = rentAngle === 360 ? 359.99 : rentAngle;
       </div>
 
       {/* Common Filter Section */}
-      <div className="common-filter-section">
+      {/* <div className="common-filter-section">
         <div className="filter-container">
           <button
             className="filter-btnn"
@@ -400,16 +400,53 @@ const safeRentAngle = rentAngle === 360 ? 359.99 : rentAngle;
             </div>
           )}
         </div>
-      </div>
+      </div> */}
 
       {/* Rent vs Buy Distribution Card */}
       <div className="rent-buy-card">
-        <div className="card-header">
-          <h2 className="card-title">Rent vs Buy Distribution ({selectedDate})</h2>
-          <button className="download-icon-btn" onClick={() => handleDownload('Rent-vs-Buy')}>
-            <img src={downloadIcon} alt="download" className="download-icon" />
-          </button>
+<div className="card-header">
+  <h2 className="card-title">
+    Buy vs Rent Distribution ({selectedDate})
+  </h2>
+
+  <div className="card-header-right">
+    
+    {/* FILTER */}
+    <div className="filter-container">
+      <button
+        className="filter-btnn"
+        onClick={() => setShowDateDropdown(showDateDropdown === "rent" ? null : "rent")}
+      >
+        <img src={calendarIcon} alt="calendar" />
+        <span>{selectedDate}</span>
+        <img src={dropdownIcon} alt="dropdown" />
+      </button>
+
+      {showDateDropdown === "rent" && (
+        <div className="filter-dropdown-reports">
+          {dateOptions.map((option) => (
+            <div
+              key={option}
+              className={`filter-option ${selectedDate === option ? "selected" : ""}`}
+              onClick={() => handleDateChange(option)}
+            >
+              {option}
+            </div>
+          ))}
         </div>
+      )}
+    </div>
+
+    {/* DOWNLOAD */}
+    <button
+      className="download-icon-btn"
+      onClick={() => handleDownload("Conversion-Rate")}
+    >
+      <img src={downloadIcon} alt="download" />
+    </button>
+
+  </div>
+</div>
 
         <div className="rent-buy-content">
           {filteredLeads.length === 0 ? (
@@ -506,12 +543,49 @@ const safeRentAngle = rentAngle === 360 ? 359.99 : rentAngle;
 
       {/* Lead Conversion Rate Card */}
       <div className="conversion-card">
-        <div className="card-header">
-          <h2 className="card-title">Lead Conversion Rate ({selectedDate})</h2>
-          <button className="download-icon-btn" onClick={() => handleDownload('Conversion-Rate')}>
-            <img src={downloadIcon} alt="download" className="download-icon" />
-          </button>
+<div className="card-header">
+  <h2 className="card-title">
+    Lead Conversion Rate ({selectedDate})
+  </h2>
+
+  <div className="card-header-right">
+    
+    {/* FILTER */}
+    <div className="filter-container">
+      <button
+        className="filter-btnn"
+        onClick={() => setShowDateDropdown(showDateDropdown === "conversion" ? null : "conversion")}
+      >
+        <img src={calendarIcon} alt="calendar" />
+        <span>{selectedDate}</span>
+        <img src={dropdownIcon} alt="dropdown" />
+      </button>
+
+      {showDateDropdown  === "conversion" && (
+        <div className="filter-dropdown-reports">
+          {dateOptions.map((option) => (
+            <div
+              key={option}
+              className={`filter-option ${selectedDate === option ? "selected" : ""}`}
+              onClick={() => handleDateChange(option)}
+            >
+              {option}
+            </div>
+          ))}
         </div>
+      )}
+    </div>
+
+    {/* DOWNLOAD */}
+    <button
+      className="download-icon-btn"
+      onClick={() => handleDownload("Conversion-Rate")}
+    >
+      <img src={downloadIcon} alt="download" />
+    </button>
+
+  </div>
+</div>
 
         {monthlyData.length === 0 || monthlyData.every(d => d.totalLeads === 0) ? (
           <div className="no-data-message" style={{ textAlign: 'center', padding: '50px', color: '#666' }}>

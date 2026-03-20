@@ -18,6 +18,7 @@
 .aa-header span {
   margin: 0 6px;
   color: gray;
+  cursor: pointer;
 }
 
 .aa-header p {
@@ -59,18 +60,15 @@
 }
 /* Rows */
 .aa-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* ✅ always 3 columns */
   gap: 20px;
   margin-bottom: 18px;
 }
 
-.aa-row-2 > * {
-  flex: 1;
-}
 
-.aa-row-3 > * {
-  flex: 1;
-}
+
+
 
 /* Inputs */
 .aa-input {
@@ -112,4 +110,35 @@
 
 .aa-error-input {
   border: 1px solid red !important;
+}
+
+.aa-field{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 78px;
+}
+
+.aa-input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  height: 44px;
+}
+
+@media (max-width: 768px) {
+  .aa-row {
+    grid-template-columns: 1fr;   /* ✅ stack fields */
+  }
+
+  .aa-card {
+    width: 100%;                /* full width */
+    padding: 20px;
+  }
+
+  .aa-header h2 {
+    font-size: 22px;            /* better mobile */
+  }
 }

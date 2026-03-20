@@ -376,7 +376,7 @@
   .admin-navbar .mobile-menu-toggle{
     display: flex;
     margin-right: 12px;
-    margin-left: 0;
+    margin-left: 12px;
   }
 
   /* Adjust right section */

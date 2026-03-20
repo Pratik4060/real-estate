@@ -172,7 +172,6 @@
     /* Hide sidebar by default - positioned off-screen */
     transform: translateX(-100%);
     width: 280px;
-    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.1);
     /* Ensure it's truly fixed and doesn't affect layout */
     position: fixed;
     left: 0;
@@ -190,7 +189,7 @@
   }
 
   .sidebar-logo {
-    width: 45px;
+    width: 65px;
     height: auto;
   }
 
@@ -244,7 +243,7 @@
   }
 
   .sidebar-logo {
-    width: 40px;
+    width: 200px;
     height: auto;
   }
 

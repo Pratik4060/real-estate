@@ -52,33 +52,46 @@ const Leads = () => {
 
   if (!formData.name.trim()) {
     newErrors.name = "Lead name is required";
+  } else if (!/^[A-Za-z\s]+$/.test(formData.name)) {
+    newErrors.name = "Lead name should contain only letters";
   }
 
-  if (!formData.phone) {
-    newErrors.phone = "Phone is required";
-  } else if (!/^[0-9]{10}$/.test(formData.phone)) {
-    newErrors.phone = "Enter valid 10-digit phone";
-  }
+
+if (!formData.phone) {
+  newErrors.phone = "Phone is required";
+} else if (!/^[0-9]{10}$/.test(formData.phone)) {
+  newErrors.phone = "Enter valid 10-digit phone";
+} else if (/^(\d)\1{9}$/.test(formData.phone)) {
+  newErrors.phone = "Invalid phone number";
+}
 
   if (formData.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
     newErrors.email = "Invalid email";
   }
 
-  if (!formData.location) {
-    newErrors.location = "Location is required";
-  }
+if (!formData.location.trim()) {
+  newErrors.location = "Location is required";
+} else if (!/^[A-Za-z\s]+$/.test(formData.location)) {
+  newErrors.location = "Location should contain only letters";
+}
 
   if (!formData.agent) {
     newErrors.agent = "Agent name is required";
-  }
+} else if (!/^[A-Za-z\s]+$/.test(formData.agent)) {
+  newErrors.agent = "Agent name should contain only letters";
+}
 
-  if (!formData.budget) {
-    newErrors.budget = "Budget is required";
-  }
-
+if (!formData.budget.trim()) {
+  newErrors.budget = "Budget is required";
+} else if (!/^[0-9a-zA-Z.\s]+$/.test(formData.budget)) {
+  newErrors.budget = "Budget can contain only numbers and letters";
+}
   if(!formData.propertytype){
     newErrors.propertytype = "Property type is required";
-  }
+  } else if (!/^[0-9a-zA-Z.\s]+$/.test(formData.propertytype)) {
+  newErrors.propertytype = "Property type can contain only numbers and letters";
+}
+
 
   if (!formData.followUp) {
     newErrors.followUp = "Follow-up date required";
@@ -143,6 +156,7 @@ const Leads = () => {
         requirement: "Buy",
         budget: "75L",
         location: "Kothrud",
+        propertytype: "Apartment",
         agent: "Amit Patil",
         followUp: "12/02/2026",
         status: "Closed",
@@ -163,6 +177,7 @@ const Leads = () => {
         budget: " 35k / mo",
         location: "Nanded City",
         agent: "Rohan Kulkarni",
+          propertytype: "1bhk",
         followUp: "11/04/2026",
         status: "New",
         internalNotes: "Looking for 2BHK apartment near IT park.",
@@ -181,6 +196,7 @@ const Leads = () => {
         requirement: "Lease",
         budget: " 1.2CR",
         location: "Koregaon Park",
+        propertytype: "Villa",
         agent: "Neha Shetty",
         followUp: "16/05/2026",
         status: "Verified",
@@ -201,6 +217,7 @@ const Leads = () => {
         budget: " 35k / mo",
         location: "Indiranagar",
         agent: "Rohan Kulkarni",
+          propertytype: "2bhk",
         followUp: "31/09/2026",
         status: "Cancelled",
         internalNotes: "Client decided to postpone property search.",
@@ -220,6 +237,7 @@ const Leads = () => {
         budget: "85L",
         location: "Wakad",
         agent: "Neha Shetty",
+        propertytype: "3bhk",
         followUp: "10/01/2026",
         status: "Verified",
         internalNotes: "Looking for ready-to-move property near school.",
@@ -1066,7 +1084,7 @@ const handleSubmit = (e) => {
                   name="propertytype"
                   value={formData.propertytype}
                   onChange={handleInputChange}
-                  placeholder="eg 75L or 35k"
+                  placeholder="eg 3BHK"
                     className={errors.propertytype ? "input-error" : ""}
                 />
                 {errors.propertytype && <span className="error-text">{errors.propertytype}</span>}
