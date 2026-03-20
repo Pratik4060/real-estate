@@ -1,4 +1,13 @@
-﻿.dashboard {
+﻿body{
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+  overscroll-behavior: none;
+  overflow-x: hidden;
+
+}
+
+.dashboard {
   width: 100%;
   background: #EFF6FF;
   font-family: "Roboto", sans-serif;
