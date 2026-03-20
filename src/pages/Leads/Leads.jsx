@@ -1063,7 +1063,7 @@ const handleSubmit = (e) => {
                 <label>Property Type</label>
                 <input
                   type="text"
-                  name="Property Type"
+                  name="propertytype"
                   value={formData.propertytype}
                   onChange={handleInputChange}
                   placeholder="eg 75L or 35k"

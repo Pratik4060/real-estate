@@ -339,6 +339,9 @@ const describeArc = (x, y, radius, startAngle, endAngle) => {
 };
   const buyAngle = buyPercentage > 0 ? (buyPercentage / 100) * 360 : 0;
   const safeBuyAngle = buyAngle === 360 ? 359.99 : buyAngle;
+
+  const rentAngle = rentPercentage > 0 ? (rentPercentage / 100) * 360 : 0;
+const safeRentAngle = rentAngle === 360 ? 359.99 : rentAngle;
   // Show loading state
   if (loading) {
     return (
@@ -353,6 +356,12 @@ const describeArc = (x, y, radius, startAngle, endAngle) => {
       </div>
     );
   }
+
+  console.log({
+  buyPercentage,
+  rentPercentage,
+  buyAngle
+});
 
   return (
     <div className="reports admin-reports-page">
@@ -422,12 +431,12 @@ const describeArc = (x, y, radius, startAngle, endAngle) => {
                 )}
 
                 {/* RENT - Green (starting from buyAngle to 360) */}
-                {rentPercentage > 0 && (
-                  <path
-                    d={describeArc(150, 150, 100, safeBuyAngle, 360)}
-                    fill="#1BF3CC"
-                  />
-                )}
+{rentPercentage > 0 && safeBuyAngle < 360 && (
+  <path
+    d={describeArc(150, 150, 100, safeBuyAngle, 360)}
+    fill="#1BF3CC"
+  />
+)}
 
                 {/* Rent Connector Line and Label */}
                 {rentPercentage > 0 && (
