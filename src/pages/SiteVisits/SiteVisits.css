@@ -793,9 +793,11 @@
     width: 100%;
   }
 
-  .admin-site-visits-page .delete-btn{
-    flex: 1;
-  }
+.admin-site-visits-page .delete-btn{
+  width: 100%;
+  justify-content: center;
+  height: 42px;
+}
 
   .admin-site-visits-page .pagination{
     flex-direction: column;
@@ -868,10 +870,5 @@
   width: 100%;
 }
 
-.admin-site-visits-page .delete-btn{
-  width: 100%;
-  justify-content: center;
-  height: 42px;
-}
 
 }
