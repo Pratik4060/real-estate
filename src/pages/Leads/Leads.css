@@ -399,6 +399,12 @@
   padding: 8px 15px 8px 15px;
   justify-content: space-between;
 }
+.admin-leads-page .leads-table th.propertytype-col,
+.admin-leads-page .leads-table td.propertytype-col{
+  width: 205px;
+  padding: 8px 15px 8px 15px;
+  justify-content: space-between;
+}
 
 .admin-leads-page .leads-table th.agent-col,
 .admin-leads-page .leads-table td.agent-col{
