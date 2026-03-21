@@ -483,7 +483,7 @@ const Agents = () => {
     }
 
     // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.com$/;
     if (!emailRegex.test(formData.email)) {
       alert("Enter a valid email address.");
       return;

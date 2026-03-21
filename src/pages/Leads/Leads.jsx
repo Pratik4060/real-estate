@@ -65,10 +65,9 @@ if (!formData.phone) {
   newErrors.phone = "Invalid phone number";
 }
 
-  if (formData.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-    newErrors.email = "Invalid email";
-  }
-
+if (formData.email && !/^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.com$/.test(formData.email)) {
+  newErrors.email = "Email must be like abc123@gmail.com and end with .com";
+}
 if (!formData.location.trim()) {
   newErrors.location = "Location is required";
 } else if (!/^[A-Za-z\s]+$/.test(formData.location)) {

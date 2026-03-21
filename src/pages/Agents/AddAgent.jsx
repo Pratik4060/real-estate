@@ -54,8 +54,8 @@ const AddAgent = () => {
 
     if (!formData.email) {
       newErrors.email = "Email is required";
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = "Invalid email";
+    } else if (!/^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.com$/.test(formData.email)) {
+      newErrors.email = "Email must be like abc123@gmail.com and end with .com";
     }
 
     if (!formData.password) {
