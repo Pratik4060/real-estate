@@ -1098,6 +1098,8 @@
     flex-direction: column;
     width: 100%;
     gap: 16px;
+        grid-template-columns: 1fr;
+
   }
   
   .admin-agents-page .stat-card1{
